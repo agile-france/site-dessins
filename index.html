@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>AgileFrance, la grande conférence agile francophone sans sponsor, de la communauté pour la communauté</title>
+		
+		<style>
+			body, .action, #teaser {
+				background-color: #FAFAFA;
+				padding: 0;
+				margin: 0;
+				font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+			}
+			
+			section, #audience, #man, #woman, #agilefrance, #postit-blue, #postit-white, #postit-red  {
+				width: 100%;
+			}
+			
+			#agilefrance, #postit-blue, #postit-white, #postit-red {
+				position: absolute;
+			}
+			
+			#man, #woman {
+				position: fixed;
+				z-index: -1;
+			}
+			
+			.willAnimate {
+				visibility: hidden;
+			}
+			
+			section {
+				clear: both;
+				height: 500px;
+				background-size: 100%;
+			}
+			
+			section .action {
+				height: 100%;
+				width: 50%;
+			}
+			
+			#session {
+				background-image: url(img/microphone.png);
+			}
+			
+			#ticket {
+				background-image: url(img/ticket.png);
+			}
+			
+			#ticket iframe {
+				width: 100%;
+				height: 100%;
+			}
+			
+			#ticket .action {
+				float: right
+			}
+			
+			#teaser {
+				background-image: url(img/audience.png);
+			}
+			
+			#teaser iframe {
+				display: block;
+				margin: auto;
+			}
+			
+			h1, h2, h3 {
+				text-align: center;
+			}
+			
+			h1 {
+				font-size: 140%;
+			}
+		</style>
+		
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+	</head>
+	<body onload="animate()">
+		<header>
+			<h1>AgileFrance, la grande conférence agile francophone sans sponsor, de la communauté pour la communauté</h1>
+			
+			<img id="man" src="img/man.png"/>
+			<img id="woman" src="img/woman.png"/>
+			<img id="agilefrance" class="willAnimate flipInX" src="img/agilefrance.png"/>
+			<img id="postit-blue" class="willAnimate zoomInLeft" src="img/postit-blue.png"/>
+			<img id="postit-white" class="willAnimate zoomInUp" src="img/postit-white.png"/>
+			<img id="postit-red" class="willAnimate zoomInRight" src="img/postit-red.png"/>
+			<img id="audience" src="img/audience.png"/>
+			
+			<h3>Les 18 et 19 juin 2015 au Chalet de la Porte Jaune à Paris</h3>
+		</header>
+		
+		<section id="ticket">
+			<div class="action">
+				<h2>Rejoignez-nous !</h2>
+				
+				<iframe id="weezuniq62248" width="100%" src="https://www.weezevent.com/widget_billeterie.php?id_evenement=62248&amp;code=43682&amp;resize=1&amp;color_primary=00AEEF&amp;v=2" resize="1" scrolling="auto" hidepoweredby="1" frameborder="0"></iframe>
+			</div>
+		</section>
+		
+		<section id="session">
+			<div class="action">
+				<h2>Présentez votre session</h2>
+				
+				<p>Vous avez une découverte incroyable à partager avec d’autres praticiens ? Un atelier que vous avez envie d’animer pour faire grandir nos connaissances à tous ? Une question à poser et sur laquelle échanger ?</p>
+				<a href="http://call4paper-agileconf.herokuapp.com">Proposez un sujet !</a>
+			</div>
+		</section>
+				
+		<section id="teaser">
+			<h2>Pas encore convaincu ?</h2>
+				
+			<iframe width="720" height="405" src="https://www.youtube-nocookie.com/embed/p316deUDtC4?rel=0" frameborder="0" allowfullscreen></iframe>
+		</section>
+		
+		
+		<script type="text/javascript">
+			function animate() {
+				Array.prototype.forEach.call(document.querySelectorAll('.willAnimate'), function(toAnimate, index) {
+					window.setTimeout(function() {
+						toAnimate.className = toAnimate.className.replace('willAnimate', 'animated')
+					}, 1000 + index * 500);
+				});
+			}
+		</script>
+	</body>
+</html>
