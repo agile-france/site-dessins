@@ -25,10 +25,6 @@
 				z-index: -1;
 			}
 			
-			.willAnimate {
-				visibility: hidden;
-			}
-			
 			section {
 				clear: both;
 				height: 500px;
@@ -98,17 +94,17 @@
 		
 		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 	</head>
-	<body onload="animate()">
+	<body>
 		<header>
 			<h1>AgileFrance, la grande conférence agile francophone sans sponsor, de la communauté pour la communauté</h1>
 			
 			<img id="man" src="img/man.png"/>
 			<img id="woman" src="img/woman.png"/>
-			<img id="agilefrance" class="willAnimate flipInX" src="img/agilefrance.png"/>
-			<img id="postit-blue" class="willAnimate zoomInLeft" src="img/postit-blue.png"/>
-			<img id="postit-white" class="willAnimate zoomInUp" src="img/postit-white.png"/>
-			<img id="postit-red" class="willAnimate zoomInRight" src="img/postit-red.png"/>
 			
+			<img id="agilefrance" class="animated flipInX" src="img/agilefrance.png"/>
+			<img id="postit-blue" class="animated zoomInLeft" src="img/postit-blue.png"/>
+			<img id="postit-white" class="animated zoomInUp" src="img/postit-white.png"/>
+			<img id="postit-red" class="animated zoomInRight" src="img/postit-red.png"/>
             <div class="embed-container ratio-audience"><img id="audience" src="img/audience.png"/></div>
 			<h3>Les 18 et 19 juin 2015 au Chalet de la Porte Jaune à Paris</h3>
 		</header>
@@ -138,13 +134,13 @@
 		
 		
 		<script type="text/javascript">
-			function animate() {
-				Array.prototype.forEach.call(document.querySelectorAll('.willAnimate'), function(toAnimate, index) {
-					window.setTimeout(function() {
-						toAnimate.className = toAnimate.className.replace('willAnimate', 'animated')
-					}, 1000 + index * 500);
+            (function animate() {
+				Array.prototype.forEach.call(document.querySelectorAll('.animated'), function(toAnimate, index) {
+                    ["webkitAnimationDelay", "mozAnimationDelay", "animationDelay"].forEach(function(att) {
+                        toAnimate.style[att] = ""  + (1 + index * .5) + "s";
+                    });
 				});
-			}
+			})();
 		</script>
 	</body>
 </html>
