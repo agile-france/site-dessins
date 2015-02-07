@@ -12,7 +12,7 @@
 				font-family: 'PT Sans', Arial, Helvetica, sans-serif;
 			}
 			
-			section, #audience, #man, #woman, #agilefrance, #postit-blue, #postit-white, #postit-red  {
+			section, #man, #woman, #agilefrance, #postit-blue, #postit-white, #postit-red  {
 				width: 100%;
 			}
 			
@@ -56,6 +56,10 @@
 			#ticket .action {
 				float: right
 			}
+
+            #audience {
+                z-index: -1;
+            }
 			
 			#teaser {
 				background-image: url(img/audience.png);
@@ -73,7 +77,24 @@
 			h1 {
 				font-size: 140%;
 			}
-		</style>
+
+            .embed-container {
+                position: relative;
+                height: 0;
+                overflow: hidden;
+            }
+
+            .ratio-audience {
+                padding-bottom: 48.33333333333333%;
+            }
+
+            .embed-container img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width:100%;
+            }
+        </style>
 		
 		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 	</head>
@@ -87,8 +108,8 @@
 			<img id="postit-blue" class="willAnimate zoomInLeft" src="img/postit-blue.png"/>
 			<img id="postit-white" class="willAnimate zoomInUp" src="img/postit-white.png"/>
 			<img id="postit-red" class="willAnimate zoomInRight" src="img/postit-red.png"/>
-			<img id="audience" src="img/audience.png"/>
 			
+            <div class="embed-container ratio-audience"><img id="audience" src="img/audience.png"/></div>
 			<h3>Les 18 et 19 juin 2015 au Chalet de la Porte Jaune à Paris</h3>
 		</header>
 		
