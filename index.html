@@ -11,15 +11,24 @@
 				font-family: 'PT Sans', Arial, Helvetica, sans-serif;
 			}
 
-			section, #man, #woman, #agilefrance, #postit-blue, #postit-white, #postit-red {
+			section, #theater img {
 				width: 100%;
 			}
 
-			#agilefrance, #postit-blue, #postit-white, #postit-red {
+			#theater iframe {
 				position: absolute;
+				top: 40%;
+				left: 33%;
+				width: 34%;
+				height: 46%;
 			}
 
-			#man, #woman {
+			#theater img {
+				position: absolute;
+				left: 0;
+			}
+
+			#people {
 				position: fixed;
 				z-index: -1;
 			}
@@ -58,11 +67,7 @@
 				z-index: -1;
 			}
 
-			#teaser {
-				background-image: url(img/audience.png);
-			}
-
-			#teaser iframe {
+			iframe {
 				display: block;
 				margin: auto;
 			}
@@ -73,23 +78,6 @@
 
 			h1 {
 				font-size: 140%;
-			}
-
-			.embed-container {
-				position: relative;
-				height: 0;
-				overflow: hidden;
-			}
-
-			.ratio-audience {
-				padding-bottom: 48.33333333333333%;
-			}
-
-			.embed-container img {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width:100%;
 			}
 
 			.animated {
@@ -109,16 +97,24 @@
 		<header>
 			<h1>AgileFrance, la grande conférence agile francophone, de la communauté pour la communauté</h1>
 			<h3>Les 18 et 19 juin 2015 au Chalet de la Porte Jaune à Paris</h3>
+		</header>
 
-			<img id="man" src="img/man.png"/>
-			<img id="woman" src="img/woman.png"/>
+		<section id="theater">
+			<img id="people" src="img/people.png"/>
 
+<!--
 			<img id="agilefrance" class="animated flipInX" src="img/agilefrance.png"/>
 			<img id="postit-blue" class="animated zoomInLeft" src="img/postit-blue.png"/>
 			<img id="postit-white" class="animated zoomInUp" src="img/postit-white.png"/>
 			<img id="postit-red" class="animated zoomInRight" src="img/postit-red.png"/>
-			<div class="embed-container ratio-audience"><img id="audience" src="img/audience.png"/></div>
-		</header>
+-->
+			<img id="audience" src="img/audience.png"/>
+			<img id="board" src="img/board.png"/>
+			<img id="background" src="img/background.png"/>
+			<iframe src="https://www.youtube-nocookie.com/embed/p316deUDtC4?rel=0" frameborder="0" allowfullscreen></iframe>
+		</section>
+
+
 
 		<section id="ticket">
 			<div class="action">
@@ -135,12 +131,6 @@
 				<p>Vous avez une découverte incroyable à partager avec d’autres praticiens ? Un atelier que vous avez envie d’animer pour faire grandir nos connaissances à tous ? Une question à poser et sur laquelle échanger ?</p>
 				<a href="http://call4paper-agileconf.herokuapp.com">Proposez un sujet !</a>
 			</div>
-		</section>
-
-		<section id="teaser">
-			<h2>Pas encore convaincu ?</h2>
-
-			<iframe width="720" height="405" src="https://www.youtube-nocookie.com/embed/p316deUDtC4?rel=0" frameborder="0" allowfullscreen></iframe>
 		</section>
 	</body>
 </html>
