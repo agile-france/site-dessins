@@ -6,25 +6,14 @@
 
 		<style>
 			body {
-				padding: 1em;
 				background-color: #FAFAFA;
 				font-family: 'PT Sans', Arial, Helvetica, sans-serif;
-			}
-
-			section, #man, #woman, #agilefrance, #postit-blue, #postit-white, #postit-red {
-				width: 100%;
-			}
-
-			#agilefrance, #postit-blue, #postit-white, #postit-red {
-				position: absolute;
-			}
-
-			#man, #woman {
-				position: fixed;
-				z-index: -1;
+				text-align: center;
+				font-size: 140%;
 			}
 
 			section {
+				width: 100%;
 				clear: both;
 				background-size: 100%;
 			}
@@ -37,88 +26,82 @@
 				padding: .5em 1em;
 			}
 
-			#session {
-				background-image: url(img/microphone.png);
-			}
-
-			#ticket {
-				background-image: url(img/ticket.png);
-			}
-
-			#ticket iframe {
+			iframe {
+				height: 60%;
 				width: 100%;
-				height: 100%;
+				display: block;
 			}
 
 			#ticket .action {
 				float: right
 			}
 
-			#audience {
-				z-index: -1;
+			#definition {
+				background: url(img/audience.png) scroll, url(img/background.png) local;
+				background-size: contain;
+				background-repeat: no-repeat;
+				padding: 0 20%;
+				box-sizing: border-box;
+				height: 100%;
+				overflow-y: scroll;
 			}
 
-			#teaser {
-				background-image: url(img/audience.png);
+			.vevent {
+				background: url(img/logo.png) no-repeat;
+				background-size: contain;
+				background-origin: 50% 10%;
+				padding-left: 50%;
 			}
 
-			#teaser iframe {
+			.vevent .url, .vevent .year {
 				display: block;
-				margin: auto;
 			}
 
-			h1, h2, h3 {
-				text-align: center;
+			.vevent .url {
+				visibility: hidden;
 			}
 
-			h1 {
-				font-size: 140%;
+			.vevent time {
+				font-size: 210%;
 			}
 
-			.embed-container {
-				position: relative;
-				height: 0;
-				overflow: hidden;
+			.vevent .year {
+				font-size: 480%;
 			}
 
-			.ratio-audience {
-				padding-bottom: 48.33333333333333%;
-			}
-
-			.embed-container img {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width:100%;
-			}
-
-			.animated {
-				-webkit-animation-delay: 2.5s;
-						animation-delay: 2.5s;
-			}
-
-			#agilefrance {
-				-webkit-animation-delay: 2s;
-						animation-delay: 2s;
+			#video {
+				margin-top: 20em;
+				margin-bottom: 8em;
 			}
 		</style>
 
 		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 	</head>
 	<body>
-		<header>
-			<h1>AgileFrance, la grande conférence agile francophone, de la communauté pour la communauté</h1>
-			<h3>Les 18 et 19 juin 2015 au Chalet de la Porte Jaune à Paris</h3>
+		<section id="definition">
+			<article id="basics">
+				<h3>La grande conférence agile francophone, de la communauté pour la communauté</h3>
 
-			<img id="man" src="img/man.png"/>
-			<img id="woman" src="img/woman.png"/>
+				<div class="vevent">
+					<time datetime="2015-06-18" class="dtstart">18&ndash;</time>
+					<time datetime="2015-06-19" class="dtend">19 juin</time>
+					<span class="year">2015</span>
+					<span class="location">
+						Chalet de la Porte Jaune<br/>
+						Bois de Vincennes, Paris
+					</span>
+					<a class="url" href="http://conference-agile.fr/">AgileFrance</a>
+				</div>
 
-			<img id="agilefrance" class="animated flipInX" src="img/agilefrance.png"/>
-			<img id="postit-blue" class="animated zoomInLeft" src="img/postit-blue.png"/>
-			<img id="postit-white" class="animated zoomInUp" src="img/postit-white.png"/>
-			<img id="postit-red" class="animated zoomInRight" src="img/postit-red.png"/>
-			<div class="embed-container ratio-audience"><img id="audience" src="img/audience.png"/></div>
-		</header>
+				<h1>Par-delà l'agilité</h1>
+				<p>Interroger nos pratiques pour les enrichir</p>
+			</article>
+
+			<article id="video">
+				<p>On adore faire cette conf’, voilà pourquoi  :)</p>
+				<iframe src="https://www.youtube-nocookie.com/embed/p316deUDtC4?rel=0" frameborder="0" allowfullscreen></iframe>
+			</article>
+		</section>
 
 		<section id="ticket">
 			<div class="action">
@@ -135,12 +118,6 @@
 				<p>Vous avez une découverte incroyable à partager avec d’autres praticiens ? Un atelier que vous avez envie d’animer pour faire grandir nos connaissances à tous ? Une question à poser et sur laquelle échanger ?</p>
 				<a href="http://call4paper-agileconf.herokuapp.com">Proposez un sujet !</a>
 			</div>
-		</section>
-
-		<section id="teaser">
-			<h2>Pas encore convaincu ?</h2>
-
-			<iframe width="720" height="405" src="https://www.youtube-nocookie.com/embed/p316deUDtC4?rel=0" frameborder="0" allowfullscreen></iframe>
 		</section>
 	</body>
 </html>
