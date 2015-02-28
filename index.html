@@ -6,34 +6,14 @@
 
 		<style>
 			body {
-				padding: 1em;
 				background-color: #FAFAFA;
 				font-family: 'PT Sans', Arial, Helvetica, sans-serif;
-			}
-
-			section, #theater img {
-				width: 100%;
-			}
-
-			#theater iframe {
-				position: absolute;
-				top: 40%;
-				left: 33%;
-				width: 34%;
-				height: 46%;
-			}
-
-			#theater img {
-				position: absolute;
-				left: 0;
-			}
-
-			#people {
-				position: fixed;
-				z-index: -1;
+				text-align: center;
+				font-size: 140%;
 			}
 
 			section {
+				width: 100%;
 				clear: both;
 				background-size: 100%;
 			}
@@ -46,75 +26,82 @@
 				padding: .5em 1em;
 			}
 
-			#session {
-				background-image: url(img/microphone.png);
-			}
-
-			#ticket {
-				background-image: url(img/ticket.png);
-			}
-
-			#ticket iframe {
+			iframe {
+				height: 60%;
 				width: 100%;
-				height: 100%;
+				display: block;
 			}
 
 			#ticket .action {
 				float: right
 			}
 
-			#audience {
-				z-index: -1;
+			#definition {
+				background: url(img/audience.png) scroll, url(img/background.png) local;
+				background-size: contain;
+				background-repeat: no-repeat;
+				padding: 0 20%;
+				box-sizing: border-box;
+				height: 100%;
+				overflow-y: scroll;
 			}
 
-			iframe {
+			.vevent {
+				background: url(img/logo.png) no-repeat;
+				background-size: contain;
+				background-origin: 50% 10%;
+				padding-left: 50%;
+			}
+
+			.vevent .url, .vevent .year {
 				display: block;
-				margin: auto;
 			}
 
-			h1, h2, h3 {
-				text-align: center;
+			.vevent .url {
+				visibility: hidden;
 			}
 
-			h1 {
-				font-size: 140%;
+			.vevent time {
+				font-size: 210%;
 			}
 
-			.animated {
-				-webkit-animation-delay: 2.5s;
-						animation-delay: 2.5s;
+			.vevent .year {
+				font-size: 480%;
 			}
 
-			#agilefrance {
-				-webkit-animation-delay: 2s;
-						animation-delay: 2s;
+			#video {
+				margin-top: 20em;
+				margin-bottom: 8em;
 			}
 		</style>
 
 		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 	</head>
 	<body>
-		<header>
-			<h1>AgileFrance, la grande conférence agile francophone, de la communauté pour la communauté</h1>
-			<h3>Les 18 et 19 juin 2015 au Chalet de la Porte Jaune à Paris</h3>
-		</header>
+		<section id="definition">
+			<article id="basics">
+				<h3>La grande conférence agile francophone, de la communauté pour la communauté</h3>
 
-		<section id="theater">
-			<img id="people" src="img/people.png"/>
+				<div class="vevent">
+					<time datetime="2015-06-18" class="dtstart">18&ndash;</time>
+					<time datetime="2015-06-19" class="dtend">19 juin</time>
+					<span class="year">2015</span>
+					<span class="location">
+						Chalet de la Porte Jaune<br/>
+						Bois de Vincennes, Paris
+					</span>
+					<a class="url" href="http://conference-agile.fr/">AgileFrance</a>
+				</div>
 
-<!--
-			<img id="agilefrance" class="animated flipInX" src="img/agilefrance.png"/>
-			<img id="postit-blue" class="animated zoomInLeft" src="img/postit-blue.png"/>
-			<img id="postit-white" class="animated zoomInUp" src="img/postit-white.png"/>
-			<img id="postit-red" class="animated zoomInRight" src="img/postit-red.png"/>
--->
-			<img id="audience" src="img/audience.png"/>
-			<img id="board" src="img/board.png"/>
-			<img id="background" src="img/background.png"/>
-			<iframe src="https://www.youtube-nocookie.com/embed/p316deUDtC4?rel=0" frameborder="0" allowfullscreen></iframe>
+				<h1>Par-delà l'agilité</h1>
+				<p>Interroger nos pratiques pour les enrichir</p>
+			</article>
+
+			<article id="video">
+				<p>On adore faire cette conf’, voilà pourquoi  :)</p>
+				<iframe src="https://www.youtube-nocookie.com/embed/p316deUDtC4?rel=0" frameborder="0" allowfullscreen></iframe>
+			</article>
 		</section>
-
-
 
 		<section id="ticket">
 			<div class="action">
