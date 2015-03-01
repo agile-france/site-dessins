@@ -20,14 +20,18 @@
 				box-sizing: border-box;
 			}
 
-			footer {
+			.frontrow {
 				position: fixed;
 				bottom: -8em;
+				width: 32%;
+			}
+
+			.frontrow.left {
 				left: 0;
 			}
 
-			footer, footer img {
-				width: 100%;
+			.frontrow.right {
+				right: 0;
 			}
 
 			iframe {
@@ -125,8 +129,7 @@
 			<a href="http://www.openstreetmap.org/?mlat=48.8384&amp;mlon=2.4594#map=16/48.8384/2.4594&amp;layers=T" title="Carte en plein écran">⤢</a>
 		</section>
 
-		<footer>
-			<img src="img/audience-front.png" alt=""/>
-		</footer>
+		<img class="frontrow left" src="img/frontrow-left.png" alt=""/>
+		<img class="frontrow right" src="img/frontrow-right.png" alt=""/>
 	</body>
 </html>
