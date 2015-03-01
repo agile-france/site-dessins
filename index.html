@@ -6,44 +6,21 @@
 
 		<style>
 			body {
-				background-color: #FAFAFA;
 				font-family: 'PT Sans', Arial, Helvetica, sans-serif;
 				text-align: center;
 				font-size: 140%;
-			}
 
-			section {
-				width: 100%;
-				clear: both;
-				background-size: 100%;
-			}
+				background-color: #FAFAFA;
+				background: url(img/audience.png) fixed, url(img/background.png);
+				background-size: cover;
+				background-repeat: no-repeat;
 
-			.action {
-				height: 100%;
-				width: 45%;
-				box-shadow: 0 0 5px black;
-				background-color: white;
-				padding: .5em 1em;
+				padding: 0 20%;
+				box-sizing: border-box;
 			}
 
 			iframe {
-				height: 60%;
 				width: 100%;
-				display: block;
-			}
-
-			#ticket .action {
-				float: right
-			}
-
-			#definition {
-				background: url(img/audience.png) scroll, url(img/background.png) local;
-				background-size: contain;
-				background-repeat: no-repeat;
-				padding: 0 20%;
-				box-sizing: border-box;
-				height: 100%;
-				overflow-y: scroll;
 			}
 
 			.vevent {
@@ -70,54 +47,71 @@
 			}
 
 			#video {
-				margin-top: 20em;
-				margin-bottom: 8em;
+				background: url(img/phone.png);
+				background-size: contain;
+				background-repeat: no-repeat;
+				padding: 1.3em 4.4em;
+				transform: rotateZ(4deg);
+			}
+
+			#video iframe {
+				height: 17em;
+			}
+
+			.folded {
+				background-color: white;
+				padding: .5em;
+				border: 1px outset #999;
+				transform: rotateZ(-3deg);
+			}
+
+			#directions iframe {
+				height: 18em;
 			}
 		</style>
 
+		<link rel="stylesheet" type="text/css" href="css/folded.css"/>
 		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 	</head>
 	<body>
 		<section id="definition">
-			<article id="basics">
-				<h3>La grande conférence agile francophone, de la communauté pour la communauté</h3>
+			<h3>La grande conférence agile francophone, de la communauté pour la communauté</h3>
 
-				<div class="vevent">
-					<time datetime="2015-06-18" class="dtstart">18&ndash;</time>
-					<time datetime="2015-06-19" class="dtend">19 juin</time>
-					<span class="year">2015</span>
-					<span class="location">
-						Chalet de la Porte Jaune<br/>
-						Bois de Vincennes, Paris
-					</span>
-					<a class="url" href="http://conference-agile.fr/">AgileFrance</a>
-				</div>
+			<div class="vevent">
+				<time datetime="2015-06-18" class="dtstart">18&ndash;</time>
+				<time datetime="2015-06-19" class="dtend">19 juin</time>
+				<span class="year">2015</span>
+				<span class="location">
+					Chalet de la Porte Jaune<br/>
+					Bois de Vincennes, Paris
+				</span>
+				<a class="url" href="http://conference-agile.fr/">AgileFrance</a>
+			</div>
 
-				<h1>Par-delà l'agilité</h1>
-				<p>Interroger nos pratiques pour les enrichir</p>
-			</article>
+			<h1>Par-delà l'agilité</h1>
+			<p>Interroger nos pratiques pour les enrichir</p>
+		</section>
 
-			<article id="video">
-				<p>On adore faire cette conf’, voilà pourquoi  :)</p>
-				<iframe src="https://www.youtube-nocookie.com/embed/p316deUDtC4?rel=0" frameborder="0" allowfullscreen></iframe>
-			</article>
+		<section id="video">
+			<iframe src="https://www.youtube-nocookie.com/embed/p316deUDtC4?rel=0" frameborder="0" allowfullscreen></iframe>
 		</section>
 
 		<section id="ticket">
-			<div class="action">
-				<h2>Rejoignez-nous !</h2>
-
-				<iframe src="https://www.weezevent.com/widget_billeterie.php?id_evenement=100289&amp;code=21867&amp;resize=1&amp;color_primary=3268a0&amp;v=2" resize="1" scrolling="auto" hidepoweredby="1" frameborder="0"></iframe>
-			</div>
+			<iframe src="https://www.weezevent.com/widget_billeterie.php?id_evenement=100289&amp;code=21867&amp;resize=1&amp;color_primary=3268a0&amp;v=2" resize="1" scrolling="auto" hidepoweredby="1" frameborder="0"></iframe>
 		</section>
 
-		<section id="session">
-			<div class="action">
-				<h2>Présentez votre session</h2>
+		<section id="cfp">
+			<h2>Présenter ma session</h2>
 
-				<p>Vous avez une découverte incroyable à partager avec d’autres praticiens ? Un atelier que vous avez envie d’animer pour faire grandir nos connaissances à tous ? Une question à poser et sur laquelle échanger ?</p>
-				<a href="http://call4paper-agileconf.herokuapp.com">Proposez un sujet !</a>
+			<p>Vous avez une découverte incroyable à partager avec d’autres praticiens ? Un atelier que vous avez envie d’animer pour faire grandir nos connaissances à tous ? Une question à poser et sur laquelle échanger ?</p>
+			<a href="http://call4paper-agileconf.herokuapp.com">Proposez un sujet !</a>
+		</section>
+
+		<section id="directions">
+			<div class="folded">
+				<iframe src="http://www.openstreetmap.org/export/embed.html?bbox=2.2817230224609375%2C48.80822011553441%2C2.4860000610351562%2C48.894856809958604&amp;layer=transportmap&amp;marker=48.838403245447694%2C2.4593710899353027" frameborder="0" scrolling="no"></iframe>
 			</div>
+			<a href="http://www.openstreetmap.org/?mlat=48.8384&amp;mlon=2.4594#map=16/48.8384/2.4594&amp;layers=T" title="Carte en plein écran">⤢</a>
 		</section>
 	</body>
 </html>
