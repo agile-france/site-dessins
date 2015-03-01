@@ -17,7 +17,7 @@
 				background-position: left bottom -8em; /* same as .frontrow bottom */
 				background-repeat: no-repeat;
 
-				padding: 19em 20%;
+				padding: 0 20%;
 				box-sizing: border-box;
 			}
 
@@ -39,17 +39,16 @@
 				width: 100%;
 			}
 
+			#logo {
+				max-width: 50%;
+				margin-top: 30%;
+				margin-bottom: 15%;
+			}
+
 			#definition {
 				background: url(img/agenda.png) no-repeat;
 				background-size: 100%;
 				padding: 10.35em 3em 13em 3em;
-			}
-
-			.vevent {
-				background: url(img/logo.png) no-repeat;
-				background-size: contain;
-				background-origin: 50% 10%;
-				padding-left: 50%;
 			}
 
 			.vevent .url, .vevent .year {
@@ -105,6 +104,10 @@
 		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 	</head>
 	<body>
+		<header>
+			<img id="logo" src="img/logo.png" alt="Agile France"/>
+		</header>
+
 		<section id="definition">
 			<h3>La grande conférence agile francophone, de la communauté pour la communauté</h3>
 
