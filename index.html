@@ -94,6 +94,11 @@
 				background-color: white;
 				padding: .5em;
 				border: 1px outset #999;
+			}
+
+			#directions {
+				position: relative;
+
 				-webkit-transform: rotateZ(-3deg);
 					-ms-transform: rotateZ(-3deg);
 						transform: rotateZ(-3deg);
@@ -101,6 +106,16 @@
 
 			#directions iframe {
 				height: 18em;
+			}
+
+			#directions a {
+				font-weight: bold;
+				color: inherit;
+				text-decoration: none;
+				position: absolute;
+				top: .5em;
+				right: .75em;
+				text-shadow: #FFF 0 0 .2em;
 			}
 		</style>
 
@@ -149,7 +164,7 @@
 			<div class="folded">
 				<iframe src="http://www.openstreetmap.org/export/embed.html?bbox=2.2817230224609375%2C48.80822011553441%2C2.4860000610351562%2C48.894856809958604&amp;layer=transportmap&amp;marker=48.838403245447694%2C2.4593710899353027" frameborder="0" scrolling="no"></iframe>
 			</div>
-			<a href="http://www.openstreetmap.org/?mlat=48.8384&amp;mlon=2.4594#map=16/48.8384/2.4594&amp;layers=T" title="Carte en plein écran">⤢</a>
+			<a href="http://www.openstreetmap.org/?mlat=48.8384&amp;mlon=2.4594#map=16/48.8384/2.4594&amp;layers=T" title="Carte en plein écran" target="_blank">⤢</a>
 		</section>
 
 		<img class="frontrow left" src="img/frontrow-left.png" alt=""/>
