@@ -116,6 +116,15 @@
 						transition: 1s all;
 			}
 
+			#directions:target {
+				z-index: 1;
+				height: 100%;
+
+				-webkit-transform: rotateZ(0deg);
+					-ms-transform: rotateZ(0deg);
+						transform: rotateZ(0deg);
+			}
+
 			#directions a {
 				font-weight: bold;
 				color: inherit;
@@ -124,15 +133,6 @@
 				top: .5em;
 				right: .75em;
 				text-shadow: #FFF 0 0 .2em;
-			}
-
-			#directions:target {
-				z-index: 1;
-				height: 100%;
-
-				-webkit-transform: rotateZ(0deg);
-					-ms-transform: rotateZ(0deg);
-						transform: rotateZ(0deg);
 			}
 
 			#directions a[href="#folded"], #directions:target a[href="#directions"] {
