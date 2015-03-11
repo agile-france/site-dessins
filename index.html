@@ -105,6 +105,19 @@
 						transform: rotateZ(-3deg);
 			}
 
+			#directions:target {
+				z-index: 1;
+				position: absolute;
+				height: 95%;
+				width: 90%;
+				left: 5%;
+				top: 1%;
+
+				-webkit-transform: rotateZ(0deg);
+					-ms-transform: rotateZ(0deg);
+						transform: rotateZ(0deg);
+			}
+
 			#directions iframe {
 				height: 100%;
 			}
@@ -114,15 +127,6 @@
 				   -moz-transition: 1s all;
 					-ms-transition: 1s all;
 						transition: 1s all;
-			}
-
-			#directions:target {
-				z-index: 1;
-				height: 100%;
-
-				-webkit-transform: rotateZ(0deg);
-					-ms-transform: rotateZ(0deg);
-						transform: rotateZ(0deg);
 			}
 
 			#directions a {
@@ -135,11 +139,11 @@
 				text-shadow: #FFF 0 0 .2em;
 			}
 
-			#directions a[href="#folded"], #directions:target a[href="#directions"] {
+			#directions a[href="#map"], #directions:target a[href="#directions"] {
 				display: none;
 			}
 
-			#directions a[href="#directions"], #directions:target a[href="#folded"] {
+			#directions a[href="#directions"], #directions:target a[href="#map"] {
 				display: block;
 			}
 		</style>
@@ -191,12 +195,10 @@
 			<a href="https://call4paper-agileconf.herokuapp.com">Proposez un sujet !</a>
 		</section>
 
-		<section id="directions">
-			<div id="folded" class="folded">
-				<iframe src="https://www.openstreetmap.org/export/embed.html?bbox=2.2817230224609375%2C48.80822011553441%2C2.4860000610351562%2C48.894856809958604&amp;layer=transportmap&amp;marker=48.838403245447694%2C2.4593710899353027" frameborder="0" scrolling="no"></iframe>
-			</div>
+		<section id="directions" class="folded">
+			<iframe id="map" src="https://www.openstreetmap.org/export/embed.html?bbox=2.2817230224609375%2C48.80822011553441%2C2.4860000610351562%2C48.894856809958604&amp;layer=transportmap&amp;marker=48.838403245447694%2C2.4593710899353027" frameborder="0" scrolling="no"></iframe>
 			<a href="#directions" title="Carte en plein écran">⤢</a>
-			<a href="#folded" title="Replier la carte">╳</a>
+			<a href="#map" title="Replier la carte">╳</a>
 		</section>
 
 		<img class="frontrow left" src="img/frontrow-left.png" alt=""/>
