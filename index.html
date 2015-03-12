@@ -29,7 +29,7 @@
 				background-size: 100%;
 			}
 
-			p {
+			p, ul {
 				text-align: left;
 			}
 
@@ -64,7 +64,7 @@
 						animation-delay: 2s;
 			}
 
-			#definition {
+			#announcement {
 				background-image: url(img/agenda.png);
 				padding: 10.35em 5em 15em 5em;
 			}
@@ -94,6 +94,25 @@
 			#cfp {
 				background-image: url(img/lanyard.png);
 				padding: 28em 10em 4em 14em;
+			}
+
+			#definition {
+				background-image: url(img/paper.png);
+				padding: 1em 3em;
+			}
+
+			#definition ul {
+				padding: 0;
+			}
+
+			#definition li {
+				list-style-type: none;
+			}
+
+			#definition li::before {
+				content: "✔︎";
+				margin-left: -1.4em;
+				margin-right: .75em;
 			}
 
 			#ticket {
@@ -172,7 +191,7 @@
 			<img id="logo" class="animated bounceInUp" src="img/logo.png" alt="Agile France"/>
 		</header>
 
-		<section id="definition">
+		<section id="announcement">
 			<div class="vevent">
 				<time datetime="2015-06-18" class="dtstart">18&ndash;</time>
 				<time datetime="2015-06-19" class="dtend">19 juin</time>
@@ -198,6 +217,23 @@
 
 		<section id="video">
 			<iframe src="https://www.youtube-nocookie.com/embed/p316deUDtC4?rel=0" frameborder="0" allowfullscreen></iframe>
+		</section>
+
+		<section id="definition">
+			<p>Agile France est une conférence qui offre un espace de respiration et d'oxygénation de nos pratiques, dans l'ambition de faire progresser la communauté sans être élitiste.</p>
+
+			<ul>
+				<li>On y parle de méthodes agiles…</li>
+				<li>On y parle d'intelligence collective et de facilitation…</li>
+				<li>On y parle de motivation, d'émotions et de bien-être au travail…</li>
+				<li>On y parle de développement de logiciels, de technique, d'artisanat…</li>
+				<li>On y parle de produit, d'expérience utilisateur et d'innovation…</li>
+				<li>On y parle d'organisations, de gouvernance et de management…</li>
+			</ul>
+
+			<p>…mais pas seulement.</p>
+			<p>On y parle de soi, de ses expériences, de ses échecs, de ses idées.</p>
+			<p>Et on ne parle pas de business.</p>
 		</section>
 
 		<section id="ticket">
