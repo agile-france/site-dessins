@@ -86,17 +86,31 @@
 
 			#video {
 				background-image: url(img/phone.png);
-				margin-top: -2em;
-				padding: 1.2em 5em 2.3em 4em;
 
 				-webkit-transform: rotateZ(4deg);
 					-ms-transform: rotateZ(4deg);
 						transform: rotateZ(4deg);
 			}
 
-			#video iframe {
-				height: 15em;
+			/** this set of instructions to keep iframe image ratio **/
+			#video {
+				position: relative;
 			}
+
+			#video:after {
+				content: " ";
+				display: block;
+				padding-top: 50.55%; /* background-image ratio  */
+			}
+
+			#video iframe {
+				position: absolute;
+				height: 85%;
+				width: 77%;
+				top: 8%;
+				left: 11.5%;
+			}
+			/** end of iframe image ratio code **/
 
 			#definition {
 				background-image: url(img/paper.png);
