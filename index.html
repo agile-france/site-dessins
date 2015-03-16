@@ -22,18 +22,6 @@
 				box-sizing: border-box;
 			}
 
-			@media screen and (min-width: 1440px) {
-				body { font-size: 180%; }
-			}
-
-			@media screen and (max-width: 1000px) {
-				body { font-size: 100%; }
-			}
-
-			@media screen and (max-width: 600px) {
-				body { font-size: 80%; }
-			}
-
 			h1, h2, h3, h4, h5, h6 {
 				font-family: 'Coming Soon', cursive;
 			}
@@ -41,6 +29,10 @@
 			html, section {
 				background-repeat: no-repeat;
 				background-size: 100%;
+			}
+
+			section {
+				margin-bottom: -1em;
 			}
 
 			p, ul {
@@ -80,7 +72,8 @@
 
 			#announcement {
 				background-image: url(img/agenda.png);
-				padding: 10.35em 5em 15em 5em;
+				padding: 10.35em 5em 4em 5em;
+				min-height: 33em;
 			}
 
 			.vevent time, .vevent .year, .vevent .url {
@@ -108,6 +101,7 @@
 			#definition {
 				background-image: url(img/paper.png);
 				padding: 1em 3em;
+				min-height: 23em;
 			}
 
 			#definition ul {
@@ -120,7 +114,7 @@
 
 			#definition li::before {
 				content: "✔︎";
-				margin-left: -1.4em;
+				margin-left: -1.75em;
 				margin-right: .75em;
 			}
 
@@ -195,6 +189,23 @@
 				background-image: url(img/lanyard.png);
 				padding: 23em 2em 4em 20em;
 			}
+
+
+			@media screen and (min-width: 1600px) {
+				body { font-size: 180%; }
+			}
+
+			@media screen and (max-width: 1000px) {
+				body { font-size: 100%; }
+			}
+
+			@media screen and (max-width: 600px) {
+				body { font-size: 80%; }
+
+				#definition {
+					padding: 1em 2.5em;
+				}
+			}
 		</style>
 
 		<link rel="stylesheet" type="text/css" href="css/folded.css"/>
@@ -247,9 +258,7 @@
 				<li>On y parle d'organisations, de gouvernance et de management…</li>
 			</ul>
 
-			<p>…mais pas seulement.</p>
-			<p>On y parle de soi, de ses expériences, de ses échecs, de ses idées.</p>
-			<p>Et on ne parle pas de business.</p>
+			<p>…mais pas seulement. On y parle de soi, de ses expériences, de ses échecs, de ses idées. Et on ne parle pas de business.</p>
 		</section>
 
 		<section id="ticket">
