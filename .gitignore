@@ -1,3 +1,6 @@
 .DS_Store
 /.idea/
 *~
+
+# Output files, see "gh-pages" branch
+public/
