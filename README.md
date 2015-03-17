@@ -6,4 +6,6 @@ This is sources for Agile France 2015 website, built with [Gulp](http://gulpjs.c
 * Install (if you don't have them):
     * [Node.js](http://nodejs.org): `brew install node` on OS X
     * [Gulp](http://brunch.io): `npm install -g gulp`
-    * Gulp plugins: `npm install`.
+    * Gulp plugins: `npm install`
+* Build:
+    * `gulp build` — build output files into public directory
