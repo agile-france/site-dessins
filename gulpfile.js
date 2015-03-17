@@ -4,9 +4,9 @@ var del = require('del');
 gulp.task('clean', function (cb) {
   del([
     // delete everything under public directory
-    'public/**',
+    'public/*',
     // except Git files
-    '!public/.git/**',
+    '!public/.git',
     '!public/.gitignore'
   ], cb);
 });
