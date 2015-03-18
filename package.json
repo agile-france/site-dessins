@@ -2,6 +2,9 @@
   "name": "AgileFrance2015",
   "version": "0.0.1",
   "description": "This is sources for Agile France 2015 website, built with Gulp",
+  "scripts": {
+    "build": "gulp build"
+  },
   "devDependencies": {
     "del": "^1.1.1",
     "gulp": "^3.8.11"
