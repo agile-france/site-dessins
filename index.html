@@ -72,16 +72,30 @@
 
 			#announcement {
 				background-image: url(img/agenda.png);
-				padding: 10.35em 5em 4em 5em;
+				padding: 5em 5em 4em 5em;
 				min-height: 33em;
 			}
 
-			.vevent time, .vevent .year, .vevent .url {
+			.vevent .year, .vevent .url {
 				visibility: hidden;
 			}
 
-			.vevent .location {
+			.vevent .month, .vevent .location {
 				display: block;
+			}
+
+			.vevent time, .vevent .month {
+				font-family: "Helvetica", "Arial", sans-serif;
+				-webkit-text-stroke: .03em #300;
+				font-size: 180%;
+				color: #900;
+				font-weight: bold;
+				position: relative;
+				left: .1em;
+			}
+
+			.vevent time {
+				font-size: 350%;
 			}
 
 			#video {
@@ -240,8 +254,9 @@
 
 		<section id="announcement">
 			<div class="vevent">
-				<time datetime="2015-06-18" class="dtstart">18&ndash;</time>
-				<time datetime="2015-06-19" class="dtend">19 juin</time>
+				<time datetime="2015-06-18" class="dtstart">18 -</time>
+				<time datetime="2015-06-19" class="dtend">19</time>
+				<span class="month">Juin</span>
 				<span class="year">2015</span>
 				<span class="location">
 					Chalet de la Porte Jaune<br/>
