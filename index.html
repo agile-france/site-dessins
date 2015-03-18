@@ -213,8 +213,13 @@
 				body { font-size: 100%; }
 			}
 
-			@media screen and (max-width: 600px) {
-				body { font-size: 80%; }
+			@media screen and (max-width: 620px), (min-resolution: 2dppx) and (max-width: 1200px), (-webkit-min-device-pixel-ratio: 2) and (max-width: 1200px) {
+				body {
+					font-size: 80%;
+					width: 100%;
+					box-sizing: border-box;
+					margin: 0;
+				}
 
 				#definition {
 					padding: 1em 2.5em;
