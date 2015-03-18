@@ -20,6 +20,7 @@
 				width: 35em;
 				margin: auto;
 				box-sizing: border-box;
+				padding-bottom: 20%;
 			}
 
 			h1, h2, h3, h4, h5, h6 {
@@ -91,12 +92,13 @@
 
 			.vevent time, .vevent .month {
 				font-family: "Helvetica", "Arial", sans-serif;
-				-webkit-text-stroke: .03em #300;
 				font-size: 180%;
 				color: #900;
 				font-weight: bold;
 				position: relative;
 				left: .1em;
+
+				-webkit-text-stroke: .03em #300;
 			}
 
 			.vevent time {
@@ -224,6 +226,35 @@
 				padding: 23em 2em 4em 20em;
 			}
 
+			#cfp p {
+				text-align: center;
+			}
+
+			#cfp .cta {
+				font-weight: bold;
+				color: #C52;
+				border: 2px solid #C52;
+				border-radius: .2em;
+				margin-top: 2em;
+
+				-webkit-transition: .5s color, .5s background-color;
+				   -moz-transition: .5s color, .5s background-color;
+					-ms-transition: .5s color, .5s background-color;
+						transition: .5s color, .5s background-color;
+			}
+
+			#cfp .cta:hover {
+				background-color: #C52;
+				color: black;
+			}
+
+			#cfp a {
+				padding: .5em 1em;
+				display: block;
+				color: inherit;
+				text-decoration: none;
+			}
+
 
 			@media screen and (min-width: 1600px) {
 				body { font-size: 180%; }
@@ -312,10 +343,13 @@
 		</section>
 
 		<section id="cfp">
-			<p>Une découverte incroyable que vous voulez partager avec d’autres praticiens&nbsp;?</p>
-			<p>Un atelier que vous souhaitez animer pour faire grandir nos connaissances&nbsp;?</p>
-			<p>Une question à poser et sur laquelle vous avez envie d'échanger&nbsp;?</p>
-			<a href="https://call4paper-agileconf.herokuapp.com">Proposez un sujet !</a>
+			<p>Partagez une découverte&nbsp;!</p>
+			<p>Lancez une discussion&nbsp;!</p>
+			<p>Posez une question&nbsp;!</p>
+			<p>Animez un atelier&nbsp;!</p>
+			<p>Faites réfléchir&nbsp;!</p>
+
+			<p class="cta"><a href="https://call4paper-agileconf.herokuapp.com">Proposez un sujet&nbsp;!</a></p>
 		</section>
 
 		<img class="frontrow left" src="img/frontrow-left.png" alt=""/>
