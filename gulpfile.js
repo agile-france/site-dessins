@@ -7,6 +7,8 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var minifyCSS = require('gulp-minify-css');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
 
 gulp.task('clean', function (cb) {
   del([
@@ -27,7 +29,17 @@ gulp.task('css', function () {
     .pipe(concat('app.css'))
     .pipe(minifyCSS())
     .pipe(rename('app.min.css'))
-    .pipe(gulp.dest('public/css'));
+    .pipe(gulp.dest('./public/css'));
+});
+ 
+gulp.task('image-min', function () {
+  return gulp.src('./app/assets/img/*')
+    .pipe(imagemin({
+        progressive: true,
+        svgoPlugins: [{removeViewBox: false}],
+        use: [pngquant()]
+    }))
+    .pipe(gulp.dest('./public/img'));
 });
 
 gulp.task('copy', ['bower'], function() {
@@ -36,7 +48,7 @@ gulp.task('copy', ['bower'], function() {
       ignorePath: '../'
     }));
 
-  var others = gulp.src(['app/assets/**', '!app/assets/*.html', '!app/assets/css/**']);
+  return gulp.src(['app/assets/**', '!app/assets/css/**', '!app/assets/img/**'])
 
   return es.merge(html, others)
     .pipe(gulp.dest('public'));
@@ -46,4 +58,4 @@ gulp.task('bower', function() {
   return bower();
 });
 
-gulp.task('build', ['clean', 'copy', 'css']);
+gulp.task('build', ['clean', 'copy', 'css', 'image-min']);
