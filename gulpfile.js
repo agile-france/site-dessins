@@ -21,7 +21,7 @@ gulp.task('clean', function (cb) {
   ], cb);
 });
 
-gulp.task('css', function () {
+gulp.task('css', ['clean'], function () {
   // keep stream CSS after Sass pre-processing
   var appFile = gulp.src('./app/styles/*.scss')
     .pipe(sass());
@@ -33,14 +33,14 @@ gulp.task('css', function () {
     .pipe(gulp.dest('./public/css'));
 });
 
-gulp.task('html-min', ['bower'], function() {
+gulp.task('html-min', ['clean', 'bower'], function() {
   return gulp.src('./app/assets/*.html')
     .pipe(wiredep({ignorePath: '../'}))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('./public'));
 });
 
-gulp.task('image-min', function () {
+gulp.task('image-min', ['clean'], function () {
   return gulp.src('./app/assets/img/*')
     .pipe(imagemin({
         progressive: true,
@@ -50,13 +50,13 @@ gulp.task('image-min', function () {
     .pipe(gulp.dest('./public/img'));
 });
 
-gulp.task('copy', function() {
+gulp.task('copy-fonts', ['clean'], function() {
   return gulp.src(['./app/assets/fonts/**'])
-    .pipe(gulp.dest('./public'));
+    .pipe(gulp.dest('./public/fonts'));
 });
 
 gulp.task('bower', function() {
   return bower();
 });
 
-gulp.task('build', ['clean', 'copy', 'css', 'html-min', 'image-min']);
+gulp.task('build', ['clean', 'copy-fonts', 'css', 'html-min', 'image-min']);
