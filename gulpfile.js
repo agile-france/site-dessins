@@ -2,8 +2,11 @@ var gulp = require('gulp');
 var del = require('del');
 var bower = require('gulp-bower');
 var wiredep = require('wiredep').stream;
-var merge = require('merge-stream');
+var es = require('event-stream');
 var sass = require('gulp-sass');
+var concat = require('gulp-concat');
+var rename = require('gulp-rename');
+var minifyCSS = require('gulp-minify-css');
 
 gulp.task('clean', function (cb) {
   del([
@@ -15,9 +18,15 @@ gulp.task('clean', function (cb) {
   ], cb);
 });
 
-gulp.task('sass', function () {
-  gulp.src('app/styles/*.scss')
-    .pipe(sass())
+gulp.task('css', function () {
+  // keep stream CSS after Sass pre-processing
+  var appFile = gulp.src('./app/styles/*.scss')
+    .pipe(sass());
+  // concat and minify CSS files and stream CSS
+  return es.concat(gulp.src('./app/assets/css/*.css'), appFile)
+    .pipe(concat('app.css'))
+    .pipe(minifyCSS())
+    .pipe(rename('app.min.css'))
     .pipe(gulp.dest('public/css'));
 });
 
@@ -27,9 +36,9 @@ gulp.task('copy', ['bower'], function() {
       ignorePath: '../'
     }));
 
-  var others = gulp.src(['app/assets/**', '!**/*.html']);
+  var others = gulp.src(['app/assets/**', '!app/assets/*.html', '!app/assets/css/**']);
 
-  return merge(html, others)
+  return es.merge(html, others)
     .pipe(gulp.dest('public'));
 });
 
@@ -37,4 +46,4 @@ gulp.task('bower', function() {
   return bower();
 });
 
-gulp.task('build', ['clean', 'copy', 'sass']);
+gulp.task('build', ['clean', 'copy', 'css']);
