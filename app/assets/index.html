@@ -68,16 +68,36 @@
 
 			#announcement {
 				background-image: url(img/agenda.png);
-				padding: 10.35em 5em 4em 5em;
+				padding: 5em 5em 4em 5em;
 				min-height: 33em;
 			}
 
-			.vevent time, .vevent .year, .vevent .url {
+			.vevent .year, .vevent .url {
 				visibility: hidden;
 			}
 
-			.vevent .location {
+			.vevent .month, .vevent .location {
 				display: block;
+			}
+
+			.vevent .location {
+				border: 2px solid #AAA;
+				border-radius: .5em;
+			}
+
+			.vevent time, .vevent .month {
+				font-family: "Helvetica", "Arial", sans-serif;
+				font-size: 180%;
+				color: #900;
+				font-weight: bold;
+				position: relative;
+				left: .1em;
+
+				-webkit-text-stroke: .03em #300;
+			}
+
+			.vevent time {
+				font-size: 350%;
 			}
 
 			#video {
@@ -112,6 +132,7 @@
 				background-image: url(img/paper.png);
 				padding: 1em 3em;
 				min-height: 23em;
+				background-repeat: repeat-y;
 			}
 
 			#definition ul {
@@ -196,8 +217,38 @@
 			}
 
 			#cfp {
+				font-size: 120%;
 				background-image: url(img/lanyard.png);
-				padding: 23em 2em 4em 20em;
+				padding: 14em 6em 4em 8em;
+			}
+
+			#cfp p {
+				text-align: center;
+			}
+
+			#cfp .cta {
+				font-weight: bold;
+				color: #C52;
+				border: 2px solid #C52;
+				border-radius: .2em;
+				margin-top: 2em;
+
+				-webkit-transition: .5s color, .5s background-color;
+				   -moz-transition: .5s color, .5s background-color;
+					-ms-transition: .5s color, .5s background-color;
+						transition: .5s color, .5s background-color;
+			}
+
+			#cfp .cta:hover {
+				background-color: #C52;
+				color: black;
+			}
+
+			#cfp a {
+				padding: .5em 1em;
+				display: block;
+				color: inherit;
+				text-decoration: none;
 			}
 
 
@@ -205,15 +256,24 @@
 				body { font-size: 180%; }
 			}
 
-			@media screen and (max-width: 1000px) {
+			@media screen and (max-width: 1024px) {
 				body { font-size: 100%; }
 			}
 
-			@media screen and (max-width: 600px) {
-				body { font-size: 80%; }
+			@media screen and (max-width: 768px), (min-resolution: 2dppx) and (max-width: 1536px), (-webkit-min-device-pixel-ratio: 2) and (max-width: 1536px) {
+				body {
+					font-size: 80%;
+					width: 100%;
+					box-sizing: border-box;
+					margin: 0;
+				}
 
 				#definition {
 					padding: 1em 2.5em;
+				}
+
+				#directions {
+					height: 50%;
 				}
 			}
 		</style>
@@ -221,6 +281,38 @@
 		<link rel="stylesheet" type="text/css" href="css/folded.css"/>
 		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
         <link href='fonts/comic-book/stylesheet.css' type="text/css" rel="stylesheet"/>
+
+		<meta name="twitter:card" content="gallery"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="http://2015.conference-agile.fr"/>
+		<meta property="og:title" content="AgileFrance 2015"/>
+		<meta property="og:description" content="Toute la communauté agile francophone se retrouvera au Chalet de la Porte Jaune les 18 et 19 juin 2015 pour deux jours d'échanges sur le thème « Par-delà l’agilité ». Rejoignez-nous !"/>
+		<meta property="og:image" content="https://raw.githubusercontent.com/agile-france/2015/gh-pages/img/gallery/agile-france-2014-1.jpg"/>
+		<meta name="twitter:image0" content="https://raw.githubusercontent.com/agile-france/2015/gh-pages/img/gallery/agile-france-2014-1.jpg">
+		<meta name="twitter:image1" content="https://raw.githubusercontent.com/agile-france/2015/gh-pages/img/gallery/agile-france-2014-2.jpg">
+		<meta name="twitter:image2" content="https://raw.githubusercontent.com/agile-france/2015/gh-pages/img/gallery/agile-france-2014-3.jpg">
+		<meta name="twitter:image3" content="https://raw.githubusercontent.com/agile-france/2015/gh-pages/img/gallery/agile-france-2014-4.jpg">
+		<meta name="twitter:site" content="@AgileFrance"/>
+
+
+		<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
+		<link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="favicons/favicon-194x194.png" sizes="194x194">
+		<link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="favicons/manifest.json">
+		<meta name="msapplication-TileColor" content="#2d89ef">
+		<meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
 		<header>
@@ -229,8 +321,9 @@
 
 		<section id="announcement">
 			<div class="vevent">
-				<time datetime="2015-06-18" class="dtstart">18&ndash;</time>
-				<time datetime="2015-06-19" class="dtend">19 juin</time>
+				<time datetime="2015-06-18" class="dtstart">18 -</time>
+				<time datetime="2015-06-19" class="dtend">19</time>
+				<span class="month">Juin</span>
 				<span class="year">2015</span>
 				<span class="location">
 					Chalet de la Porte Jaune<br/>
@@ -281,10 +374,13 @@
 		</section>
 
 		<section id="cfp">
-			<p>Une découverte incroyable que vous voulez partager avec d’autres praticiens&nbsp;?</p>
-			<p>Un atelier que vous souhaitez animer pour faire grandir nos connaissances&nbsp;?</p>
-			<p>Une question à poser et sur laquelle vous avez envie d'échanger&nbsp;?</p>
-			<a href="https://call4paper-agileconf.herokuapp.com">Proposez un sujet !</a>
+			<p>Partagez une découverte&nbsp;!</p>
+			<p>Lancez une discussion&nbsp;!</p>
+			<p>Posez une question&nbsp;!</p>
+			<p>Animez un atelier&nbsp;!</p>
+			<p>Faites réfléchir&nbsp;!</p>
+
+			<p class="cta"><a href="https://call4paper-agileconf.herokuapp.com">Proposez un sujet&nbsp;!</a></p>
 		</section>
 
 		<img class="frontrow left" src="img/frontrow-left.png" alt=""/>
