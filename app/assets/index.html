@@ -12,8 +12,12 @@
 				background-attachment: fixed;
 			}
 
+			.comic-book-loaded body {
+				font-family: 'Comic Book', cursive;
+			}
+
 			body {
-                font-family: 'Comic Book', cursive;
+				font-family: cursive;
 				text-align: center;
 				font-size: 140%;
 
@@ -280,7 +284,9 @@
 
 		<link rel="stylesheet" type="text/css" href="css/folded.css"/>
 		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
-        <link href='fonts/comic-book/stylesheet.css' type="text/css" rel="stylesheet"/>
+		<link href='fonts/comic-book/stylesheet.css' type="text/css" rel="stylesheet"/>
+		<!-- bower:css -->
+		<!-- endbower -->
 
 		<meta name="twitter:card" content="gallery"/>
 		<meta property="og:type" content="website"/>
@@ -385,5 +391,14 @@
 
 		<img class="frontrow left" src="img/frontrow-left.png" alt=""/>
 		<img class="frontrow right" src="img/frontrow-right.png" alt=""/>
+		<!-- bower:js -->
+		<!-- endbower -->
+		<script>
+			FontFaceOnload('Comic Book', {
+				success: function() {
+					document.documentElement.className += ' comic-book-loaded';
+				}
+			});
+		</script>
 	</body>
 </html>

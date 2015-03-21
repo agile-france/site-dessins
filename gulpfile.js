@@ -1,5 +1,8 @@
 var gulp = require('gulp');
 var del = require('del');
+var bower = require('gulp-bower');
+var wiredep = require('wiredep').stream;
+var merge = require('merge-stream');
 
 gulp.task('clean', function (cb) {
   del([
@@ -11,7 +14,19 @@ gulp.task('clean', function (cb) {
   ], cb);
 });
 
-gulp.task('build', ['clean'], function() {
-  return gulp.src('app/assets/**')
+gulp.task('build', ['clean', 'bower'], function() {
+  var html = gulp.src('app/assets/*.html')
+    .pipe(wiredep({
+      ignorePath: '../'
+    }));
+
+  var others = gulp.src(['app/assets/**', '!**/*.html']);
+    
+
+  return merge(html, others)
     .pipe(gulp.dest('public'));
+});
+
+gulp.task('bower', function() {
+  return bower();
 });
