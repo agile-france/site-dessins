@@ -1,17 +1,11 @@
 var gulp = require('gulp');
-var del = require('del');
-var bower = require('gulp-bower');
-var wiredep = require('wiredep').stream;
 var es = require('event-stream');
-var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
-var minifyCSS = require('gulp-minify-css');
-var htmlmin = require('gulp-htmlmin');
-var imagemin = require('gulp-imagemin');
-var pngquant = require('imagemin-pngquant');
 
 gulp.task('clean', function (cb) {
+  var del = require('del');
+
   del([
     // delete everything under public directory
     './public/*',
@@ -22,6 +16,9 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('css', ['clean'], function () {
+  var sass = require('gulp-sass');
+  var minifyCSS = require('gulp-minify-css');
+
   // keep stream CSS after Sass pre-processing
   var appFile = gulp.src('./app/styles/*.scss')
     .pipe(sass());
@@ -34,6 +31,9 @@ gulp.task('css', ['clean'], function () {
 });
 
 gulp.task('html-min', ['clean', 'bower'], function() {
+  var wiredep = require('wiredep').stream;
+  var htmlmin = require('gulp-htmlmin');
+
   return gulp.src('./app/assets/*.html')
     .pipe(wiredep({ignorePath: '../'}))
     .pipe(htmlmin({collapseWhitespace: true}))
@@ -41,6 +41,9 @@ gulp.task('html-min', ['clean', 'bower'], function() {
 });
 
 gulp.task('image-min', ['clean'], function () {
+  var imagemin = require('gulp-imagemin');
+  var pngquant = require('imagemin-pngquant');
+
   return gulp.src('./app/assets/img/*')
     .pipe(imagemin({
         progressive: true,
@@ -56,6 +59,8 @@ gulp.task('copy-fonts', ['clean'], function() {
 });
 
 gulp.task('bower', function() {
+  var bower = require('gulp-bower');
+
   return bower();
 });
 
