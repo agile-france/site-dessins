@@ -35,7 +35,7 @@ gulp.task('html-min', ['clean', 'bower'], function() {
   var htmlmin = require('gulp-htmlmin');
 
   return gulp.src('./app/assets/*.html')
-    .pipe(wiredep({ignorePath: '../'}))
+    .pipe(wiredep({ignorePath: '../../'}))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('./public'));
 });
@@ -58,10 +58,11 @@ gulp.task('copy-fonts', ['clean'], function() {
     .pipe(gulp.dest('./public/fonts'));
 });
 
-gulp.task('bower', function() {
+gulp.task('bower', ['clean'], function() {
   var bower = require('gulp-bower');
 
-  return bower();
+  return bower()
+    .pipe(gulp.dest('./public/bower_components'));
 });
 
 gulp.task('build', ['clean', 'copy-fonts', 'css', 'html-min', 'image-min']);
