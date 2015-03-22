@@ -8,6 +8,7 @@
   "devDependencies": {
     "del": "^1.1.1",
     "event-stream": "^3.3.0",
+    "gh-pages": "^0.2.0",
     "gulp": "^3.8.11",
     "gulp-bower": "0.0.10",
     "gulp-concat": "^2.5.2",

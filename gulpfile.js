@@ -65,3 +65,13 @@ gulp.task('bower', function() {
 });
 
 gulp.task('build', ['clean', 'copy-fonts', 'css', 'html-min', 'image-min']);
+
+gulp.task('deploy', ['build'], function(cb) {
+  var ghPages = require('gh-pages');
+
+  ghPages.publish('./public', {
+      logger: function(message) {
+          console.log(message);
+      }
+  }, cb);
+});
