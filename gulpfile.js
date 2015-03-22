@@ -58,6 +58,11 @@ gulp.task('copy-fonts', ['clean'], function() {
     .pipe(gulp.dest('./public/fonts'));
 });
 
+gulp.task('copy-travis', ['clean'], function() {
+    return gulp.src(['./.travis.yml'])
+        .pipe(gulp.dest('./public/'));
+});
+
 gulp.task('bower', ['clean'], function() {
   var bower = require('gulp-bower');
 
@@ -65,14 +70,27 @@ gulp.task('bower', ['clean'], function() {
     .pipe(gulp.dest('./public/bower_components'));
 });
 
-gulp.task('build', ['clean', 'copy-fonts', 'css', 'html-min', 'image-min']);
+gulp.task('deploy_integ', ['build'], function(cb) {
+    var ghPages = require('gh-pages');
 
-gulp.task('deploy', ['build'], function(cb) {
-  var ghPages = require('gh-pages');
-
-  ghPages.publish('./public', {
-      logger: function(message) {
-          console.log(message);
-      }
-  }, cb);
+    ghPages.publish('./public', {
+        logger: function(message) {
+            console.log(message);
+        }
+    }, cb);
 });
+
+gulp.task('deploy_prod', ['build'], function(cb) {
+    var ghPages = require('gh-pages');
+
+    ghPages.publish('./public', {
+        branch: 's3',
+        dotfiles: true,
+        logger: function(message) {
+            console.log(message);
+        }
+    }, cb);
+});
+
+gulp.task('build', ['clean', 'copy-fonts', 'copy-travis', 'css', 'html-min', 'image-min']);
+
