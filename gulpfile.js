@@ -44,7 +44,7 @@ gulp.task('image-min', ['clean'], function () {
   var imagemin = require('gulp-imagemin');
   var pngquant = require('imagemin-pngquant');
 
-  return gulp.src('./app/assets/img/*')
+  return gulp.src('./app/assets/img/**/*')
     .pipe(imagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: false}],
