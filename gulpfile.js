@@ -9,9 +9,17 @@ gulp.task('clean', function (cb) {
   del([
     // delete everything under public directory
     './public/*',
+    // except images, very long to generate
+    '!./public/img',
     // except Git files
     '!./public/.git',
     '!./public/.gitignore'
+  ], cb);
+});
+
+gulp.task('clean-img', function (cb) {
+  require('del')([
+    './public/img'
   ], cb);
 });
 
@@ -40,7 +48,7 @@ gulp.task('html-min', ['clean', 'bower'], function() {
     .pipe(gulp.dest('./public'));
 });
 
-gulp.task('image-min', ['clean'], function () {
+gulp.task('image-min', ['clean-img'], function () {
   var imagemin = require('gulp-imagemin');
   var pngquant = require('imagemin-pngquant');
 
@@ -92,5 +100,6 @@ gulp.task('deploy_prod', ['build'], function(cb) {
     }, cb);
 });
 
-gulp.task('build', ['clean', 'copy-fonts', 'copy-travis', 'css', 'html-min', 'image-min']);
+gulp.task('build-fast', ['clean', 'copy-fonts', 'copy-travis', 'css', 'html-min']);
+gulp.task('build', ['build-fast', 'image-min']);
 

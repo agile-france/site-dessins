@@ -9,3 +9,4 @@ These are the sources for Agile France 2015 website, built with [Gulp](http://gu
     * Gulp plugins: `npm install`
 * Build:
     * `gulp build` — build output files into public directory
+    * `gulp build-fast` — build output files into public directory, but consider images are already there
