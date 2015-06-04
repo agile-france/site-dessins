@@ -39,6 +39,7 @@ p, ul {
   position: fixed;
   bottom: -8em; /* same as body background-position */
   width: 32%;
+  pointer-events: none;
 }
 
 .frontrow.left {
