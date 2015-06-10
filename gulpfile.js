@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var es = require('event-stream');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
+var path = require('path');
 
 gulp.task('clean', function (cb) {
   var del = require('del');
@@ -82,6 +83,7 @@ gulp.task('deploy_integ', ['build'], function(cb) {
     var ghPages = require('gh-pages');
 
     ghPages.publish('./public', {
+        clone: path.relative(process.cwd(), path.resolve(__dirname, '.cache/integ')),
         logger: function(message) {
             console.log(message);
         }
@@ -92,6 +94,7 @@ gulp.task('deploy_prod', ['build'], function(cb) {
     var ghPages = require('gh-pages');
 
     ghPages.publish('./public', {
+        clone: path.relative(process.cwd(), path.resolve(__dirname, '.cache/prod')),
         branch: 's3',
         dotfiles: true,
         logger: function(message) {

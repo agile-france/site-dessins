@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  font-family: cursive;
+  font-family: 'Comic Sans MS', cursive;
   text-align: center;
   font-size: 140%;
 
@@ -39,6 +39,7 @@ p, ul {
   position: fixed;
   bottom: -8em; /* same as body background-position */
   width: 32%;
+  pointer-events: none;
 }
 
 .frontrow.left {
