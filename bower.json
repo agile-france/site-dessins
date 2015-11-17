@@ -1,7 +1,7 @@
 {
-  "name": "AgileFrance2015",
+  "name": "AgileFrance2016",
   "version": "0.0.1",
-  "description": "This is sources for Agile France 2015 website, built with Gulp",
+  "description": "This is sources for Agile France 2016 website, built with Gulp",
   "dependencies": {
     "fontfaceonload": "0.1.6"
   }
