@@ -1,6 +1,6 @@
 # Install
 
-These are the sources for Agile France 2015 website, built with [Gulp](http://gulpjs.com).
+These are the sources for Agile France 2016 website, built with [Gulp](http://gulpjs.com).
 
 ## Getting started
 * Install (if you don't have them):
