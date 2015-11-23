@@ -79,23 +79,12 @@ gulp.task('bower', ['clean'], function() {
     .pipe(gulp.dest('./public/bower_components'));
 });
 
-gulp.task('deploy_integ', ['build'], function(cb) {
-    var ghPages = require('gh-pages');
-
-    ghPages.publish('./public', {
-        clone: path.relative(process.cwd(), path.resolve(__dirname, '.cache/integ')),
-        logger: function(message) {
-            console.log(message);
-        }
-    }, cb);
-});
-
-gulp.task('deploy_prod', ['build'], function(cb) {
+gulp.task('deploy', ['build'], function(cb) {
     var ghPages = require('gh-pages');
 
     ghPages.publish('./public', {
         clone: path.relative(process.cwd(), path.resolve(__dirname, '.cache/prod')),
-        branch: 's3',
+        repo: 'git@github.com:AgileFrance/site-conference-2016.git',
         dotfiles: true,
         logger: function(message) {
             console.log(message);
@@ -105,4 +94,3 @@ gulp.task('deploy_prod', ['build'], function(cb) {
 
 gulp.task('build-fast', ['clean', 'copy-fonts', 'copy-travis', 'css', 'html-min']);
 gulp.task('build', ['build-fast', 'image-min']);
-

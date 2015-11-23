@@ -1,17 +1,15 @@
 language: node_js
-node_js:
-- '4.2'
-script: true
+node_js: '4.2'
 sudo: false
+env:
+  global:
+  - secure: hTHh8CEQCft7GPQn0E3FFkv4bzcnXrsAGQNG81fr9ZsBRxeubZsN4p6t3zTNzI0SUe3XlQvOAPzgrFLyy0/jSN/atFBm6wnK7EOj+NG3lj8Z+Zc765rPIzABG5pOPtXIWcuGYtNIg1UsAw7Do3a2tYLXhHDTJSPyY/HrJjeGrMvIwsBUaNScMUaSoffVyHebJSsi3sqPPvwfE2/PotrjwwfpvdHiCbBN3y0LfWFDPtrHBNSZNNimP9L6AmAjYgiq8ca/AGGrbhRbmiNsyVXU/9AuMdSMZ8Jeylm9o4A8IiMTDI2M8vJTJ60x1VMbrXCUTH/Qmuf/FplJP1KB5FLKEzdlhMHzs53ZkEV22ElluBOGffA4QD5cK3uiHXxM5YXO5kAgiymGdM0eEUhnhRS2iPpZqBtrm5yPQGYGgqA3wI9D7MdC5b64kPiP4SgWn90OBmTbZYHjuwpQGJcajEUol0ecUFkMdMJfp9xrz6iAz7UxxqIQ8ardANxMF+FrmRhv/X9zBm4MyKNU+stcGM6zgaB8YOvq2EBC1m4j7NF63w3V6NiF4svHGz1KvGV5/51IjY63oe7IglmE2fPGkFAa4VmLw8+qZPkvHgb9A1YmLfptwMUTlIJEZZSfYAqwISLQfA3kB4I1EtRGDylVo/4EEKuA/fwc6T3zqhwi5FJj2Gc=
+script: ./node_modules/.bin/gulp build
+after_success:
+- mv deploy-key ~/.ssh/id_rsa
+- chmod 600 ~/.ssh/id_rsa
 deploy:
-  provider: s3
-  access_key_id: AKIAJ77G5SOMGZESAK7Q
-  secret_access_key:
-    secure: fNRIZWsVIi+mQ5G3uSsaRx9/P5pl5L2kqEeigx2n85Pvo+yjMbc9F1UYh3vxt8YJFyrjb6RuOIp4KzjzEvDPjTEs3K//pDxLX1UNulsY2hWUrrvj6g+u6Ra5xvHJYUQaAdMATzT22MgHOBFsv0kDrHWF8yY9KwYLfKCEG6N0Dhc=
-  bucket: 2016.conference-agile.fr
-  skip_cleanup: true
-  endpoint: 2016.conference-agile.fr.s3-website.eu-central-1.amazonaws.com
-  region: eu-central-1
+  provider: script
+  script: ./node_modules/.bin/gulp deploy
   on:
-    repo: agile-france/2016
-    branch: s3
+    branch: master
