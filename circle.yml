@@ -14,4 +14,6 @@ deployment:
   production:
     branch: circle
     commands:
+      - git config --global user.email "contact@conference-agile.org"
+      - git config --global user.name "AgileFrance deployment bot"
       - npm run deploy
