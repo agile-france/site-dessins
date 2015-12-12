@@ -1,0 +1,13 @@
+machine:
+  node:
+    version: 4.2
+
+test:
+  override:
+    - npm run build
+
+deployment:
+  production:
+    branch: cd
+    commands:
+      - npm run deploy
