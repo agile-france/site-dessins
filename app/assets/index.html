@@ -133,6 +133,14 @@
 			ga('create', 'UA-61132510-2', 'auto');
 			ga('set', 'anonymizeIp', true);	// tracké par Google, mais IP anonymisées
 			ga('send', 'pageview');
+
+			Array.prototype.forEach.call(document.querySelectorAll('a'), function(a) {
+				a.addEventListener('click', function() {
+					ga('send', 'event', 'outbound', 'click', a.title || a.href, {
+						'hitCallback': function() { document.location = a.href; }
+					});
+				});
+			});
 		</script>
 	</body>
 </html>
