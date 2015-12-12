@@ -26,14 +26,10 @@ gulp.task('clean-img', function (cb) {
 });
 
 gulp.task('css', ['clean'], function () {
-  var sass = require('gulp-sass');
   var minifyCSS = require('gulp-minify-css');
 
-  // keep stream CSS after Sass pre-processing
-  var appFile = gulp.src('./app/styles/*.scss')
-    .pipe(sass());
   // concat and minify CSS files and stream CSS
-  return es.concat(gulp.src('./app/assets/css/*.css'), appFile)
+  return gulp.src('./app/assets/css/*.css')
     .pipe(concat('app.css'))
     .pipe(minifyCSS())
     .pipe(rename('app.min.css'))
