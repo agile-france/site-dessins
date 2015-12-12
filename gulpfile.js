@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var es = require('event-stream');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
+var file = require('gulp-file');
 var path = require('path');
 
 gulp.task('clean', function (cb) {
@@ -67,9 +68,12 @@ gulp.task('copy-fonts', ['clean'], function() {
     .pipe(gulp.dest('./public/fonts'));
 });
 
-gulp.task('copy-travis', ['clean'], function() {
-    return gulp.src(['./.travis.yml'])
-        .pipe(gulp.dest('./public/'));
+gulp.task('generate-cname', function() {
+  if (! process.env.npm_package_config_target_url)
+    throw new Error('Must be called from NPM to define "target_url" in config');
+
+  return file('CNAME', process.env.npm_package_config_target_url, { src: true })
+    .pipe(gulp.dest('./public'));
 });
 
 gulp.task('bower', ['clean'], function() {
@@ -79,7 +83,7 @@ gulp.task('bower', ['clean'], function() {
     .pipe(gulp.dest('./public/bower_components'));
 });
 
-gulp.task('deploy', ['build'], function(cb) {
+gulp.task('deploy', ['build', 'generate-cname'], function(cb) {
     var ghPages = require('gh-pages');
 
     ghPages.publish('./public', {
@@ -92,5 +96,5 @@ gulp.task('deploy', ['build'], function(cb) {
     }, cb);
 });
 
-gulp.task('build-fast', ['clean', 'copy-fonts', 'copy-travis', 'css', 'html-min']);
+gulp.task('build-fast', ['clean', 'copy-fonts', 'css', 'html-min']);
 gulp.task('build', ['build-fast', 'image-min']);
