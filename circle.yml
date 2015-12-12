@@ -8,6 +8,6 @@ test:
 
 deployment:
   production:
-    branch: cd
+    branch: circle
     commands:
       - npm run deploy
