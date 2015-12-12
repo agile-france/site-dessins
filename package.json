@@ -2,8 +2,12 @@
   "name": "AgileFrance2016",
   "version": "0.0.1",
   "description": "This is sources for Agile France 2016 website, built with Gulp",
+  "config": {
+    "target_url": "2016.conf.agile-france.org"
+  },
   "scripts": {
-    "build": "gulp build"
+    "build": "gulp build",
+    "deploy": "gulp deploy"
   },
   "devDependencies": {
     "del": "^1.1.1",
@@ -12,6 +16,7 @@
     "gulp": "^3.8.11",
     "gulp-bower": "0.0.11",
     "gulp-concat": "^2.5.2",
+    "gulp-file": "^0.2.0",
     "gulp-htmlmin": "^1.1.1",
     "gulp-imagemin": "^2.2.1",
     "gulp-minify-css": "^1.0.0",

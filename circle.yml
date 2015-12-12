@@ -1,0 +1,19 @@
+machine:
+  node:
+    version: 4.2
+
+dependencies:
+  post:
+    - npm rebuild node-sass  # library can't find its bindings when cached
+
+test:
+  override:
+    - npm run build
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - git config --global user.email "contact@conference-agile.org"
+      - git config --global user.name "AgileFrance deployment bot"
+      - npm run deploy
