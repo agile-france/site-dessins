@@ -13,6 +13,7 @@ gulp.task('clean', function (cb) {
     './public/*',
     // except images, very long to generate
     '!./public/img',
+    '!./public/favicons',
     // except Git files
     '!./public/.git',
     '!./public/.gitignore'
@@ -21,7 +22,8 @@ gulp.task('clean', function (cb) {
 
 gulp.task('clean-img', function (cb) {
   require('del')([
-    './public/img'
+    './public/img',
+    './public/favicons',
   ], cb);
 });
 
@@ -64,6 +66,11 @@ gulp.task('copy-fonts', ['clean'], function() {
     .pipe(gulp.dest('./public/fonts'));
 });
 
+gulp.task('copy-favicons', ['clean-img'], function() {
+  return gulp.src(['./app/assets/favicons/**'])
+    .pipe(gulp.dest('./public/favicons'));
+});
+
 gulp.task('generate-cname', function() {
   if (! process.env.npm_package_config_target_url)
     throw new Error('Must be called from NPM to define "target_url" in config');
@@ -93,4 +100,4 @@ gulp.task('deploy', ['build', 'generate-cname'], function(cb) {
 });
 
 gulp.task('build-fast', ['clean', 'copy-fonts', 'css', 'html-min']);
-gulp.task('build', ['build-fast', 'image-min']);
+gulp.task('build', ['build-fast', 'image-min', 'copy-favicons']);
