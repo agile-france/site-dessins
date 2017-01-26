@@ -14,8 +14,8 @@ These are the sources for the Agile France website.
 
 ## Updating the contents for a new year
 
-- Replace all instances of the previous year by the current year (e.g. find-and-replace “2016” by “2017”) and update the dates. See for example f5975a5e4e3809048509e7631fe6a5eab11230b5.
-- Change the order of sections. See for example 2e306601ca23ffe07893095dc2a1f5479140be5d.
+- Replace all instances of the previous year by the current year (e.g. find-and-replace “2016” by “2017”) and update the dates. See for example [f5975a5](https://github.com/agile-france/site-dessins/commit/f5975a5e4e3809048509e7631fe6a5eab11230b5).
+- Change the order of sections. See for example [2e30660](https://github.com/agile-france/site-dessins/commit/2e306601ca23ffe07893095dc2a1f5479140be5d).
 
 ## Deploying
 
