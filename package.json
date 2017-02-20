@@ -12,9 +12,9 @@
     "dev": "nswatch"
   },
   "watch": {
-    "./app/index.html": "build-fast",
-    "./app/css/*": "build-fast",
-    "./app/img/*": "build"
+    "./app/assets/index.html": "build-fast",
+    "./app/assets/css/*": "build-fast",
+    "./app/assets/img/*": "build"
   },
   "devDependencies": {
     "del": "^1.1.1",
