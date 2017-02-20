@@ -154,7 +154,7 @@ iframe {
 
 #ticket iframe {
   border: #333 2px inset;
-  height: 28em;
+  height: 940px;  /* we can't adjust the font size of the widget, so set size in px */
 }
 
 .folded {
