@@ -38,12 +38,10 @@ gulp.task('css', ['clean'], function () {
     .pipe(gulp.dest('./public/css'));
 });
 
-gulp.task('html-min', ['clean', 'bower'], function() {
-  var wiredep = require('wiredep').stream;
+gulp.task('html-min', ['clean'], function() {
   var htmlmin = require('gulp-htmlmin');
 
   return gulp.src('./app/assets/*.html')
-    .pipe(wiredep({ignorePath: '../../'}))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('./public'));
 });
@@ -82,13 +80,6 @@ gulp.task('generate-cname', function() {
 
   return file('CNAME', process.env.npm_package_config_target_url, { src: true })
     .pipe(gulp.dest('./public'));
-});
-
-gulp.task('bower', ['clean'], function() {
-  var bower = require('gulp-bower');
-
-  return bower()
-    .pipe(gulp.dest('./public/bower_components'));
 });
 
 gulp.task('deploy', ['build', 'generate-cname'], function(cb) {

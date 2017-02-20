@@ -4,7 +4,5 @@
 
 # Node modules
 node_modules/
-# Bower components
-bower_components/
 # Output files, see "gh-pages" branch
 public/
