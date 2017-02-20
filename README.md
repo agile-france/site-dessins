@@ -9,8 +9,9 @@ These are the sources for the Agile France website.
     * [Gulp](http://gulpjs.com/): `npm install -g gulp`
     * Gulp plugins: `npm install`
 * Build:
-    * `gulp build` — build output files into public directory
-    * `gulp build-fast` — build output files into public directory, but consider images are already there
+    * `npm run build` — build output files into public directory
+    * `npm run build-fast` — build output files into public directory, but consider images are already there
+    * `npm run dev` — build automatically when you make changes.
 
 ## Updating the contents for a new year
 
