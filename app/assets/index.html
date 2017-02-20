@@ -101,12 +101,14 @@
 		<img class="frontrow right" src="img/frontrow-right.png" alt=""/>
 		<!-- bower:js -->
 		<!-- endbower -->
+
+		<script src="js/fontfaceobserver.js"></script>
 		<script>
-			FontFaceOnload('Comic Book', {
-				success: function() {
+			new FontFaceObserver('Comic Book')
+				.load(null, 30000)  // 30s timeout: nothing terrible happens until the font is loaded
+				.then(function() {
 					document.documentElement.className += ' comic-book-loaded';
-				}
-			});
+				});
 		</script>
 
 		<script>

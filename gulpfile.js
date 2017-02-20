@@ -66,6 +66,11 @@ gulp.task('copy-fonts', ['clean'], function() {
     .pipe(gulp.dest('./public/fonts'));
 });
 
+gulp.task('copy-libs', ['clean'], function() {
+  return gulp.src('./node_modules/fontfaceobserver/fontfaceobserver.js')
+    .pipe(gulp.dest('./public/js'));
+});
+
 gulp.task('copy-favicons', ['clean-img'], function() {
   return gulp.src(['./app/assets/favicons/**'])
     .pipe(gulp.dest('./public/favicons'));
@@ -99,5 +104,5 @@ gulp.task('deploy', ['build', 'generate-cname'], function(cb) {
     }, cb);
 });
 
-gulp.task('build-fast', ['clean', 'copy-fonts', 'css', 'html-min']);
+gulp.task('build-fast', ['clean', 'copy-fonts', 'copy-libs', 'css', 'html-min']);
 gulp.task('build', ['build-fast', 'image-min', 'copy-favicons']);
