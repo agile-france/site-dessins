@@ -4,10 +4,9 @@ These are the sources for the Agile France website.
 
 ## Getting started
 
-* Install (if you don't have them):
-    * [Node.js](https://nodejs.org): `brew install node` on OS X
-    * [Gulp](http://gulpjs.com/): `npm install -g gulp`
-    * Gulp plugins: `npm install`
+* Install:
+    * [Node.js](https://nodejs.org): `brew install node` with [homebrew](https://brew.sh) on macOS
+    * Dependencies: `npm install`
 * Build:
     * `npm run build` — build output files into public directory
     * `npm run build-fast` — build output files into public directory, but consider images are already there
