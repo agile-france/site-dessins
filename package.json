@@ -8,7 +8,13 @@
   "scripts": {
     "build": "gulp build",
     "build-fast": "gulp build-fast",
-    "deploy": "gulp deploy"
+    "deploy": "gulp deploy",
+    "dev": "nswatch"
+  },
+  "watch": {
+    "./app/assets/index.html": "build-fast",
+    "./app/assets/css/*": "build-fast",
+    "./app/assets/img/*": "build"
   },
   "devDependencies": {
     "del": "^1.1.1",
@@ -23,6 +29,7 @@
     "gulp-minify-css": "^1.0.0",
     "gulp-rename": "^1.2.0",
     "imagemin-pngquant": "^4.0.0",
+    "nswatch": "^0.2.0",
     "wiredep": "^2.2.2"
   }
 }
