@@ -1,7 +1,7 @@
 html {
   background-color: #FAFAFA;
-  background-image:   url(../img/audience.png),  url(../img/background.png);
-  background-position:  left bottom -8em,   top; /* same as .frontrow bottom */
+  background-image:   url(../img/audience.png);
+  background-position:  left bottom -6em; /* same as .frontrow bottom */
   background-attachment: fixed;
 }
 
@@ -34,7 +34,7 @@ p, ul {
 
 .frontrow {
   position: fixed;
-  bottom: -8em; /* same as body background-position */
+  bottom: -6em; /* same as body background-position */
   width: 32%;
   pointer-events: none;
 }
