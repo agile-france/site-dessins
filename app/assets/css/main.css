@@ -154,7 +154,7 @@ iframe {
 
 #ticket iframe {
   border: #333 2px inset;
-  height: 28em;
+  height: 940px;  /* we can't adjust the font size of the widget, so set size in px */
 }
 
 .folded {
@@ -217,7 +217,7 @@ iframe {
 #cfp {
   font-size: 120%;
   background-image: url(../img/lanyard.png);
-  padding: 14em 6em 4em 8em;
+  padding: 12em 6em 4em 8em;
 }
 
 #cfp p {
