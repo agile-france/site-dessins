@@ -11,8 +11,9 @@ gulp.task('clean', function (cb) {
   del([
     // delete everything under public directory
     './public/*',
-    // except images, very long to generate
+    // except images and docs, very long to generate
     '!./public/img',
+    '!./public/docs',
     '!./public/favicons',
     // except Git files
     '!./public/.git',
@@ -23,6 +24,7 @@ gulp.task('clean', function (cb) {
 gulp.task('clean-img', function (cb) {
   require('del')([
     './public/img',
+    './public/docs',
     './public/favicons',
   ], cb);
 });
@@ -64,6 +66,11 @@ gulp.task('copy-fonts', ['clean'], function() {
     .pipe(gulp.dest('./public/fonts'));
 });
 
+gulp.task('copy-docs', ['clean'], function() {
+  return gulp.src(['./app/assets/docs/**'])
+    .pipe(gulp.dest('./public/docs'));
+});
+
 gulp.task('copy-libs', ['clean'], function() {
   return gulp.src('./node_modules/fontfaceobserver/fontfaceobserver.js')
     .pipe(gulp.dest('./public/js'));
@@ -96,4 +103,4 @@ gulp.task('deploy', ['build', 'generate-cname'], function(cb) {
 });
 
 gulp.task('build-fast', ['clean', 'copy-fonts', 'copy-libs', 'css', 'html-min']);
-gulp.task('build', ['build-fast', 'image-min', 'copy-favicons']);
+gulp.task('build', ['build-fast', 'image-min', 'copy-favicons', 'copy-docs']);
