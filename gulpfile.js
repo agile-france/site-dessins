@@ -94,7 +94,7 @@ gulp.task('deploy', ['build', 'generate-cname'], function(cb) {
 
     ghPages.publish('./public', {
         clone: path.relative(process.cwd(), path.resolve(__dirname, '.cache/prod')),
-        repo: 'git@github.com:AgileFrance/site-conference-2017.git',
+        repo: 'git@github.com:AgileFrance/site-conference-2018.git',
         dotfiles: true,
         logger: function(message) {
             console.log(message);

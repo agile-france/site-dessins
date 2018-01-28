@@ -1,9 +1,9 @@
 {
-  "name": "AgileFrance2017",
+  "name": "AgileFrance2018",
   "version": "0.0.1",
-  "description": "This is sources for Agile France 2017 website, built with Gulp",
+  "description": "This is sources for Agile France 2018 website, built with Gulp",
   "config": {
-    "target_url": "2017.conf.agile-france.org"
+    "target_url": "2018.conf.agile-france.org"
   },
   "scripts": {
     "build": "gulp build",
