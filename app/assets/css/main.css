@@ -1,7 +1,7 @@
 html {
   background-color: #FAFAFA;
   background-image:   url(../img/audience.png);
-  background-position:  left bottom -6em; /* same as .frontrow bottom */
+  background-position:  left top -6em; /* same as .frontrow bottom */
   background-attachment: fixed;
 }
 
@@ -154,7 +154,7 @@ iframe {
 
 #ticket iframe {
   border: #333 2px inset;
-  height: 940px;  /* we can't adjust the font size of the widget, so set size in px */
+  height: 1050px;  /* we can't adjust the font size of the widget, so set size in px */
 }
 
 .folded {
