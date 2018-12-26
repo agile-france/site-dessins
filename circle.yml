@@ -8,7 +8,7 @@ test:
 
 deployment:
   production:
-    branch: dev-change-to-2018
+    branch: dev-change-to-2019
     commands:
       - git config --global user.email "contact@conference-agile.org"
       - git config --global user.name "AgileFrance deployment bot"
