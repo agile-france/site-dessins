@@ -100,7 +100,6 @@ iframe {
 
 #video {
   background-image: url(../img/phone.png);
-
   -webkit-transform: rotateZ(4deg);
     -ms-transform: rotateZ(4deg);
       transform: rotateZ(4deg);
@@ -114,7 +113,12 @@ iframe {
 #video:after {
   content: " ";
   display: block;
-  padding-top: 50.55%; /* background-image ratio  */
+  padding-top: 7%; /* background-image ratio  */
+}
+
+#video img {
+  max-width:500px;
+  margin-top:35px;
 }
 
 #video iframe {
