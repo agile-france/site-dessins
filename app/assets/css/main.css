@@ -154,11 +154,13 @@ iframe {
 #ticket {
   background-image: url(../img/ticket-2019.jpg);
   padding-top: 42%;
+  background-color: white;
+  font-size: 18px;
 }
 
 #ticket iframe {
   border: #333 2px inset;
-  height: 1050px;  /* we can't adjust the font size of the widget, so set size in px */
+  height: 1550px;  /* we can't adjust the font size of the widget, so set size in px */
 }
 
 .folded {
