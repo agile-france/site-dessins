@@ -1,0 +1,23 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:latest
+    working_directory: ~/repo
+    branches:
+      only:
+        - dev-change-to-2019
+    steps:
+      - checkout
+      - run:
+          name: Npm install (node_modules directory)
+          command: npm install
+      - run:
+          name: Git config user.email command
+          command: git config --global user.email "contact@conference-agile.org"
+      - run:
+          name: Git config user.name command
+          command: git config --global user.name "AgileFrance deployment bot"
+      - deploy:
+          name: Deployment by gulp deploy task
+          command: npm run deploy
