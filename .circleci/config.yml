@@ -18,6 +18,9 @@ jobs:
       - run:
           name: Git config user.name command
           command: git config --global user.name "AgileFrance deployment bot"
+      - add_ssh_keys:
+          fingerprints:
+            - "80:b8:43:4e:22:81:b4:0a:0e:c4:bc:0f:08:b9:76:52"
       - deploy:
           name: Deployment by gulp deploy task
           command: npm run deploy
