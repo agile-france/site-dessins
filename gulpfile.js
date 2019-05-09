@@ -89,7 +89,7 @@ gulp.task('generate-cname', function() {
     .pipe(gulp.dest('./public'));
 });
 
-gulp.task('deploy', ['build-fast', 'generate-cname'], function(cb) {
+gulp.task('deploy', ['build', 'generate-cname'], function(cb) {
     var ghPages = require('gh-pages');
 
     ghPages.publish('./public', {
