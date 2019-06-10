@@ -1,0 +1,118 @@
+<input type="file" id="file-input" >
+<pre id="file-content" style="background:black; color:white"></pre>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.0.0/papaparse.min.js" type="text/javascript"></script>
+
+<script>
+	function onlyUnique(value, index, self) { 
+		return self.indexOf(value) === index;
+	}
+
+	function groupBy (datas, key) {
+		let resultDatas = [];
+
+		let keys = datas.map(d => d[key]).filter(onlyUnique);
+
+		for (var k in keys) {
+			resultDatas[keys[k]] = datas.filter(d => d[key] == keys[k]);
+		}
+
+		return resultDatas;
+	}
+
+	function capitalize (s) {
+		if (typeof s !== 'string')
+			return ''
+		
+		return s.charAt(0).toUpperCase() + s.slice(1)
+	}
+
+	function convertDatas(rawDatas) {
+		let resultDatas = [];
+
+		for (var i=0; i<rawDatas.length; i++) {
+
+			if (rawDatas[i].ID === '') continue;
+				console.log(rawDatas[i])
+			var data = {
+				id: rawDatas[i].ID,
+				sortUrlName: `AF2019-${ rawDatas[i].ID }`,
+				publicUrl: `https://roti.express/r/AF2019-${ rawDatas[i].ID }`,
+				tags: [
+					'Conférence Agile France 2019',
+					rawDatas[i].jour,
+					rawDatas[i].plage.split(' ')[0]
+				]
+			};
+				
+			var speakers = [
+				`${rawDatas[i].Prénom1} ${rawDatas[i].Nom1}`
+			];
+			
+			if (rawDatas[i].Prénom2 !== '' && rawDatas[i].Nom2 !== '') {
+				speakers.push(`${rawDatas[i].Prénom2} ${rawDatas[i].Nom2}`)
+			}
+
+			if (rawDatas[i].Prénom3 !== '' && rawDatas[i].Nom3 !== '') {
+				speakers.push(`${rawDatas[i].Prénom3} ${rawDatas[i].Nom3}`)
+			}
+			
+			data['rotiTitle'] = `${ rawDatas[i].Titre } (${ speakers.join(', ') })`
+			
+			resultDatas.push(data);
+		}
+
+		return resultDatas;
+	}
+
+	function groupByDay(talks) {
+		let days = [];
+
+		for (var i=0; i<talks.length; i++) {
+			let talk = talks[i];
+			
+			if (!days.map(d => d.day).includes(talk.day)) {
+				days.push({
+					day: talk.day,
+					dayName: talk.dayName,
+					events: talks
+							.filter(t => t.day === talk.day)
+							.sort(function(a, b){
+								if(a.startTime < b.startTime) return -1;
+								if(a.startTime > b.startTime) return 1;
+								return 0;
+							})
+				});
+			}
+		}
+		
+		return days;
+	}
+
+	function readSingleFile(e) {
+	  var file = e.target.files[0];
+	  if (!file)
+			return;
+	  
+	  Papa.parse(file, {
+				header: true,
+				delimiter: ',',
+				complete: function(results) {
+					var parsedDatas = convertDatas(results.data);
+
+			
+					
+					console.log(JSON.stringify(parsedDatas, null, 4));
+					
+					displayContents(JSON.stringify(parsedDatas, null, 4));
+				}
+			});
+	}
+	 
+	function displayContents(contents) {
+	  var element = document.getElementById('file-content');
+		element.innerHTML = contents;
+	}
+	 
+	document.getElementById('file-input').addEventListener('change', readSingleFile, false);
+</script>
