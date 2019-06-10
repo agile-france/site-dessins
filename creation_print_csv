@@ -1,0 +1,12 @@
+# Pour créer schedule_print.csv à partir de schedule.csv
+NB : j'utilise un script Python pour créer des pages ici http://www.ekkehardwill.de/sg/
+
+Pas très souple comme script.
+Du coup ce qu'il faut faire sur le schedule.csv
+* séparateur virgule
+* tous les textes sont entre "quote"
+* tous les <br> sont remplacé par des "\n" 
+et normalement ça marche !
+
+J'utilise OPEN OFFICE pour ouvrir le CSV et l'enregistrer au format CSV 
+J'utilise un éditeur de texte GEANY pour remplacer les <br> par des \n
