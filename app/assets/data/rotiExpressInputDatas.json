@@ -1,0 +1,284 @@
+[
+    {
+        "id": "1",
+        "publicUrl": "https://roti.express/r/AF2019-1",
+        "tags": "Conférence Agile France 2019, Jeudi matin, Long",
+        "rotiTitle": "Créez vos jeux pédagogiques pour parler de vos sujets sérieux (Grégory ALEXANDRE)"
+    },
+    {
+        "id": "4",
+        "publicUrl": "https://roti.express/r/AF2019-4",
+        "tags": "Conférence Agile France 2019, Vendredi Après-midi, Atelier",
+        "rotiTitle": "#LostInTransformation : revenons aux bases (Laetitia THERNIER, Régis SCHNEIDER)"
+    },
+    {
+        "id": "5",
+        "publicUrl": "https://roti.express/r/AF2019-5",
+        "tags": "Conférence Agile France 2019, Vendredi Après-midi, Court",
+        "rotiTitle": "Dynamique de Groupe et Cohésion selon la théorie organisationnelle de Berne, Petit Guide de survie pour Leader Jedi (Anne-Sophie GIRAULT LE MAULT)"
+    },
+    {
+        "id": "6",
+        "publicUrl": "https://roti.express/r/AF2019-6",
+        "tags": "Conférence Agile France 2019, Vendredi Après-midi, Court",
+        "rotiTitle": "L'atomic design (Aurelie AMBAL)"
+    },
+    {
+        "id": "11",
+        "publicUrl": "https://roti.express/r/AF2019-11",
+        "tags": "Conférence Agile France 2019, Vendredi matin, Long",
+        "rotiTitle": "SCRUMind : le mille-borne agile (François-Xavier LEONETTI, Amélie PLEAU)"
+    },
+    {
+        "id": "14",
+        "publicUrl": "https://roti.express/r/AF2019-14",
+        "tags": "Conférence Agile France 2019, Vendredi Après-midi, Court",
+        "rotiTitle": "Les développeurs et les fonctionnalités, plus que les sprints et les daily meetings (Arnaud PICHERY)"
+    },
+    {
+        "id": "15",
+        "publicUrl": "https://roti.express/r/AF2019-15",
+        "tags": "Conférence Agile France 2019, Vendredi matin, Long",
+        "rotiTitle": "Priotour : jouer à prioriser collectivement (Yann GOWSY, Alexandre QUACH)"
+    },
+    {
+        "id": "17",
+        "publicUrl": "https://roti.express/r/AF2019-17",
+        "tags": "Conférence Agile France 2019, Vendredi Après-midi, Atelier",
+        "rotiTitle": "Hackez vos réunions avec les Liberating Structures (Anne GABRILLAGUES)"
+    },
+    {
+        "id": "18",
+        "publicUrl": "https://roti.express/r/AF2019-18",
+        "tags": "Conférence Agile France 2019, Jeudi matin, Long",
+        "rotiTitle": "Comment j'ai switché mon cerveau (Aurélien WILLE)"
+    },
+    {
+        "id": "22",
+        "publicUrl": "https://roti.express/r/AF2019-22",
+        "tags": "Conférence Agile France 2019, Vendredi matin, Long",
+        "rotiTitle": "Ras le bol des méthodes agiles, passons aux méthodes rigides !! (Mickaël ANDRE)"
+    },
+    {
+        "id": "25",
+        "publicUrl": "https://roti.express/r/AF2019-25",
+        "tags": "Conférence Agile France 2019, Jeudi après-midi, Court",
+        "rotiTitle": "Le dessin au service des agents du changement (Gautier LESIEUR)"
+    },
+    {
+        "id": "29",
+        "publicUrl": "https://roti.express/r/AF2019-29",
+        "tags": "Conférence Agile France 2019, Vendredi Après-midi, Atelier",
+        "rotiTitle": "Oui, seigneur directeur général (Fabrice BLOCH, Armelle KOEHL)"
+    },
+    {
+        "id": "33",
+        "publicUrl": "https://roti.express/r/AF2019-33",
+        "tags": "Conférence Agile France 2019, Jeudi matin, Long",
+        "rotiTitle": "Peut-on parler de DevOps sans parler d'Agilité ? (Vincent JOBARD)"
+    },
+    {
+        "id": "41",
+        "publicUrl": "https://roti.express/r/AF2019-41",
+        "tags": "Conférence Agile France 2019, Jeudi matin, Long",
+        "rotiTitle": "Décider efficacement en équipe oui, mais comment ? (Frantz DEGRIGNY, Gaelle ABAUTRET)"
+    },
+    {
+        "id": "42",
+        "publicUrl": "https://roti.express/r/AF2019-42",
+        "tags": "Conférence Agile France 2019, Vendredi Après-midi, Atelier",
+        "rotiTitle": "Systemische weergave van Moordrecht (Arnaud GERVAIS, Grégory ALEXANDRE)"
+    },
+    {
+        "id": "43",
+        "publicUrl": "https://roti.express/r/AF2019-43",
+        "tags": "Conférence Agile France 2019, Jeudi matin, Long",
+        "rotiTitle": "Faire de l'entreprise une aventure humaine (Charline RENART, Coline GUICHARD)"
+    },
+    {
+        "id": "45",
+        "publicUrl": "https://roti.express/r/AF2019-45",
+        "tags": "Conférence Agile France 2019, Vendredi Après-midi, Atelier",
+        "rotiTitle": "Un MVP sans code en un mois au Ministère de l'Intérieur (Dominique LEQUEPEYS, Philippe BRON)"
+    },
+    {
+        "id": "53",
+        "publicUrl": "https://roti.express/r/AF2019-53",
+        "tags": "Conférence Agile France 2019, Jeudi matin, Long",
+        "rotiTitle": "Agiliser une chaine de valeur en 3 mois (YES!) : de la Stratégie Marketing jusqu’à la boutique - Retour d’expérience (Moïra DEGROOTE, Laurent LAME)"
+    },
+    {
+        "id": "55",
+        "publicUrl": "https://roti.express/r/AF2019-55",
+        "tags": "Conférence Agile France 2019, Vendredi Après-midi, Atelier",
+        "rotiTitle": "Développer sa maturité produit, ce qu'il faut savoir ! (Tiphanie VINET)"
+    },
+    {
+        "id": "57",
+        "publicUrl": "https://roti.express/r/AF2019-57",
+        "tags": "Conférence Agile France 2019, Jeudi après-midi, Court",
+        "rotiTitle": "Préserver la planète par le fret ferroviaire, un modèle d'innovation orientée résultats (Bertrand MINARY)"
+    },
+    {
+        "id": "58",
+        "publicUrl": "https://roti.express/r/AF2019-58",
+        "tags": "Conférence Agile France 2019, Vendredi matin, Long",
+        "rotiTitle": "Bullshit Game : Comment bousculer un Comité de Direction (Emmanuelle LEFORT, Marina SOSNIAK)"
+    },
+    {
+        "id": "60",
+        "publicUrl": "https://roti.express/r/AF2019-60",
+        "tags": "Conférence Agile France 2019, Vendredi matin, Long",
+        "rotiTitle": "Presta externes ou insiders : comment rendre addict à la potion Agile les grosses structures ? (Jean-Michel ARNOUX)"
+    },
+    {
+        "id": "63",
+        "publicUrl": "https://roti.express/r/AF2019-63",
+        "tags": "Conférence Agile France 2019, Vendredi Après-midi, Atelier",
+        "rotiTitle": "Xtrem Reading - «Lisez 2 livres en 1 heure» (Yoan THIRION)"
+    },
+    {
+        "id": "67",
+        "publicUrl": "https://roti.express/r/AF2019-67",
+        "tags": "Conférence Agile France 2019, Vendredi Après-midi, Atelier",
+        "rotiTitle": "Je pilote une transformation Agile, mais chut, je suis un développeur (imposteur), le Frank Abagnale de l’Agilité ! (Eric PATRIZIO)"
+    },
+    {
+        "id": "72",
+        "publicUrl": "https://roti.express/r/AF2019-72",
+        "tags": "Conférence Agile France 2019, Jeudi matin, Long",
+        "rotiTitle": "Magie noire ou comment les All Blacks se construisent hors du terrain ? (Nils LESIEUR, Stéphane BACHELET)"
+    },
+    {
+        "id": "74",
+        "publicUrl": "https://roti.express/r/AF2019-74",
+        "tags": "Conférence Agile France 2019, Vendredi matin, Long",
+        "rotiTitle": "Le Software Craftsmanship expliqué à ma mère, mon PO, mes devs, etc. (Frédéric FAURE)"
+    },
+    {
+        "id": "76",
+        "publicUrl": "https://roti.express/r/AF2019-76",
+        "tags": "Conférence Agile France 2019, Jeudi matin, Long",
+        "rotiTitle": "Pédagogie Agile : Et si l'implication, l'attention, la mémorisation et la gratitude se cultivaient ? (Manuella CHAINOT-BATAILLE)"
+    },
+    {
+        "id": "82",
+        "publicUrl": "https://roti.express/r/AF2019-82",
+        "tags": "Conférence Agile France 2019, Vendredi Après-midi, Court",
+        "rotiTitle": "L’agilité ça ne marche pas ! Ok, mais pourquoi ? (Emilie SULMONT Florence TOUTAIN, Vincent FASSEU François BOISSEL, et Mickaël SEVERE)"
+    },
+    {
+        "id": "84",
+        "publicUrl": "https://roti.express/r/AF2019-84",
+        "tags": "Conférence Agile France 2019, Vendredi Après-midi, Clôture",
+        "rotiTitle": "L’agilité ça ne marche pas ! Ok, mais pourquoi ? (suite) (Emilie SULMONT Florence TOUTAIN, Vincent FASSEU François BOISSEL, et Mickaël SEVERE)"
+    },
+    {
+        "id": "83",
+        "publicUrl": "https://roti.express/r/AF2019-83",
+        "tags": "Conférence Agile France 2019, Vendredi Après-midi, Extérieur",
+        "rotiTitle": "Le taoïsme, source d'agilité (Dov TSAL)"
+    },
+    {
+        "id": "93",
+        "publicUrl": "https://roti.express/r/AF2019-93",
+        "tags": "Conférence Agile France 2019, Jeudi matin, Long",
+        "rotiTitle": "Managers, trouvez votre place dans un monde agile (Nicolas KALMANOVITZ, Alban DALLE)"
+    },
+    {
+        "id": "95",
+        "publicUrl": "https://roti.express/r/AF2019-95",
+        "tags": "Conférence Agile France 2019, Vendredi matin, Long",
+        "rotiTitle": "Et si Mario était UX designer... (Sarah COLMON, Alexandra NEMERY)"
+    },
+    {
+        "id": "97",
+        "publicUrl": "https://roti.express/r/AF2019-97",
+        "tags": "Conférence Agile France 2019, Jeudi matin, Long",
+        "rotiTitle": "Comment accélerer vos tests... une histoire de Machine Learning (Ismail HAMMOUNOU, Philippe BOURGAU)"
+    },
+    {
+        "id": "98",
+        "publicUrl": "https://roti.express/r/AF2019-98",
+        "tags": "Conférence Agile France 2019, Vendredi matin, Long",
+        "rotiTitle": "Live Refactoring de Legacy Code avec les techniques du Golden Master et du Mikado Method (Philippe BOURGAU)"
+    },
+    {
+        "id": "105",
+        "publicUrl": "https://roti.express/r/AF2019-105",
+        "tags": "Conférence Agile France 2019, Jeudi matin, Long",
+        "rotiTitle": "Sur le chemin de la qualité : en équipe et dès demain ! (Julien JAKUBOWSKI)"
+    },
+    {
+        "id": "106",
+        "publicUrl": "https://roti.express/r/AF2019-106",
+        "tags": "Conférence Agile France 2019, Jeudi après-midi, Court",
+        "rotiTitle": "L'UX, acteur de la transformation d'un pays ! (Philippe SOURGET, Victor PICHON)"
+    },
+    {
+        "id": "107",
+        "publicUrl": "https://roti.express/r/AF2019-107",
+        "tags": "Conférence Agile France 2019, Vendredi Après-midi, Court",
+        "rotiTitle": "Des outils pour changer de posture managériale (Olivier LE LAN)"
+    },
+    {
+        "id": "108",
+        "publicUrl": "https://roti.express/r/AF2019-108",
+        "tags": "Conférence Agile France 2019, Vendredi Après-midi, Court",
+        "rotiTitle": "Quelle est notre réponse à l'adage documenter, oui ! mais il faut une doc utile (Thomas BONSET, Émilien BOULBEN)"
+    },
+    {
+        "id": "112",
+        "publicUrl": "https://roti.express/r/AF2019-112",
+        "tags": "Conférence Agile France 2019, Jeudi après-midi, Court",
+        "rotiTitle": "La vie est un jeu... de rôle ! (Elodie DESCHARMES)"
+    },
+    {
+        "id": "117",
+        "publicUrl": "https://roti.express/r/AF2019-117",
+        "tags": "Conférence Agile France 2019, Vendredi matin, Long",
+        "rotiTitle": "Le Wedding PI Planning (Pascale POTHIN, Marco MARCAL, Catherine BOUDLAL)"
+    },
+    {
+        "id": "128",
+        "publicUrl": "https://roti.express/r/AF2019-128",
+        "tags": "Conférence Agile France 2019, Vendredi, Déjeuner",
+        "rotiTitle": "Déboires agiles au comptoir (Grégoire QUENTIN, Dan MAGIER)"
+    },
+    {
+        "id": "129",
+        "publicUrl": "https://roti.express/r/AF2019-129",
+        "tags": "Conférence Agile France 2019, Vendredi matin, Long",
+        "rotiTitle": "A la recherche de la résilience, l’agile local et à petite échelle (Nathaniel RICHAND)"
+    },
+    {
+        "id": "130",
+        "publicUrl": "https://roti.express/r/AF2019-130",
+        "tags": "Conférence Agile France 2019, Vendredi matin, Long",
+        "rotiTitle": "Scale Puzzle Game (Bastien JACOUD, Edouard PRIMAULT)"
+    },
+    {
+        "id": "131",
+        "publicUrl": "https://roti.express/r/AF2019-131",
+        "tags": "Conférence Agile France 2019, Jeudi matin, Long",
+        "rotiTitle": "Les enfants terribles de l'agilité, l'atelier ludo parodico télévisuo pédagogique ! (Emmanuel GUE, Alexandre HUETE)"
+    },
+    {
+        "id": "141",
+        "publicUrl": "https://roti.express/r/AF2019-141",
+        "tags": "Conférence Agile France 2019, Jeudi après-midi, Court",
+        "rotiTitle": "Réussir le changement sur les projets agiles ! (Davy AZAM, Didier ORTEGA)"
+    },
+    {
+        "id": "144",
+        "publicUrl": "https://roti.express/r/AF2019-144",
+        "tags": "Conférence Agile France 2019, Jeudi matin, Long",
+        "rotiTitle": "Education Nationale : Qui a dit que le mammouth ne pouvait pas être agile ? (Marta THONGSAVARN, Nicolas CHAIGNEAU, Xavier FENOUIL)"
+    },
+    {
+        "id": "007",
+        "publicUrl": "https://roti.express/r/AF2019-007",
+        "tags": "Conférence Agile France 2019, Vendredi matin, Keynote",
+        "rotiTitle": "Si Darwin avait raison, l'agilité fonctionne par hasard (François ZANINOTTO)"
+    }
+]
