@@ -69,10 +69,12 @@
 					<li>Lancez une discussion&nbsp;!</li>
 					<li>Posez une question&nbsp;!</li>
 					<li>Animez un atelier&nbsp;!</li>
-					<li>Faites réfléchir&nbsp;!</li>
+					<li>Faites réfléchir ...</li>
+					<li><a href="https://sessionize.com/agile-france-2020/" target="_blank">... proposez votre sujet sans plus attendre&nbsp;!</a></li>
+					<li>Et n'oubliez pas nos <a href="https://www.meetup.com/fr-FR/Repetitions-Agile-France-Perfection-Games/" target="_blank">meetups perfection games&nbsp;!</a></li>
+
 				</ul>
-				Attention, ouverture imminente CFP et billeterie édition 2020 !
-				<a title="En direct via le Twitter Agile France" href="https://twitter.com/AgileFrance" target="_blank">Restez connecté ...</a><br /><br />
+				<p>Billetterie ouverte, <a href="#billetterie">achetez votre billet au tarif early !</a></p>
 				<small>
 					Pour bien comprendre la philosophie <a href="#agile-france">Agile France</a>, lisez nos bilans financiers :
 					<a href="docs/bilan-agilefrance-2015.pdf">2015 (en BD)</a>,
@@ -104,9 +106,14 @@
 			<a href="#directions" title="Carte en plein écran">⤢</a>
 			<a href="#map" title="Replier la carte">╳</a>
 		</section>
+		<section id="ticket">
+			<a name="billetterie"></a>
+			<em>Si vous rencontrez des difficultés pour l'achat de votre billet sur notre site, <a href="https://www.weezevent.com/conference-agile-france-2020" target="_blank">suivez ce lien</a>.</em>
+			<a title="Logiciel billetterie en ligne" href="https://weezevent.com/?c=sys_widget" class="weezevent-widget-integration" target="_blank" data-src="https://widget.weezevent.com/ticket/E598448/?id_evenement=598448&lg_billetterie=1&code=25595&width_auto=1&color_primary=00AEEF" data-width="650" data-height="600" data-id="598448" data-resize="1" data-width_auto="1" data-noscroll="0" data-nopb="0" data-type="neo">Billetterie Weezevent</a></script>
+		</section>
 		<img class="frontrow left" src="img/frontrow-left.png"/>
 		<img class="frontrow right" src="img/frontrow-right.png"/>
-		<script type="text/javascript" src="https://www.weezevent.com/js/widget/min/widget.min.js"></script>
+		<script type="text/javascript" src="https://widget.weezevent.com/weez.js"></script>
 		<script type="text/javascript" src="js/fontfaceobserver.js"></script>
 		<script type="text/javascript">
 			new FontFaceObserver('Comic Book')
@@ -114,22 +121,6 @@
 				.then(function() {
 					document.documentElement.className += ' comic-book-loaded';
 				});
-		</script>
-		<script type="text/javascript">
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-61132510-2', 'auto');
-			ga('set', 'anonymizeIp', true);	// tracké par Google, mais IP anonymisées
-			ga('send', 'pageview');
-			Array.prototype.forEach.call(document.querySelectorAll('a'), function(a) {
-				a.addEventListener('click', function() {
-					ga('send', 'event', 'outbound', 'click', a.title || a.href, {
-						'hitCallback': function() { document.location = a.href; }
-					});
-				});
-			});
 		</script>
 	</body>
 </html>
