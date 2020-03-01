@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158208909-1"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'UA-158208909-1');
-		</script>
 		<meta charset="utf8"/>
 		<title>Charte conférence Agile France 2020</title>
 		<meta name="description" content="Charte de la conférence Agile France 2020 : Agile France est la grande conférence Agile de la communauté pour la communauté (francophone, sans sponsor)."/>
@@ -27,6 +19,20 @@
 				font-size: 120%;
 			}
 		</style>
+		<!-- Matomo -->
+		<script type="text/javascript">
+			var _paq = window._paq || [];
+			/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			(function() {
+				var u="//agile-matomo.ethibox.fr/";
+				_paq.push(['setTrackerUrl', u+'matomo.php']);
+				_paq.push(['setSiteId', '2']);
+				var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+				g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+			})();
+		</script>
 	</head>
 	<body>
 		<h1>Charte (<em lang="en">code of conduct</em>) Conférence Agile France 2020</h1>

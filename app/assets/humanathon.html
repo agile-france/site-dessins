@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158208909-1"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'UA-158208909-1');
-		</script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<title>Humanathon Agile France 2020, la grande conférence Agile francophone sans sponsor (Paris)</title>
 		<meta name="description" content="Humanathon - Conférence Agile France édition 2020 : 11 et 12 juin Chalet de la Porte Jaune Bois de Vincennes Paris"/>
@@ -43,6 +35,20 @@
 		<link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192"/>
 		<link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16"/>
 		<link rel="manifest" href="favicons/manifest.json"/>
+		<!-- Matomo -->
+		<script type="text/javascript">
+			var _paq = window._paq || [];
+			/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			(function() {
+				var u="//agile-matomo.ethibox.fr/";
+				_paq.push(['setTrackerUrl', u+'matomo.php']);
+				_paq.push(['setSiteId', '2']);
+				var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+				g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+			})();
+		</script>
 	</head>
 	<body>
 		<header>
@@ -69,22 +75,6 @@
 				.then(function() {
 					document.documentElement.className += ' comic-book-loaded';
 				});
-		</script>
-		<script type="text/javascript">
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-61132510-2', 'auto');
-			ga('set', 'anonymizeIp', true);	// tracké par Google, mais IP anonymisées
-			ga('send', 'pageview');
-			Array.prototype.forEach.call(document.querySelectorAll('a'), function(a) {
-				a.addEventListener('click', function() {
-					ga('send', 'event', 'outbound', 'click', a.title || a.href, {
-						'hitCallback': function() { document.location = a.href; }
-					});
-				});
-			});
 		</script>
 	</body>
 </html>
